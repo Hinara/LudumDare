@@ -3,7 +3,7 @@ solution: LudumDare.sln
 before_install:
 - chmod a+x ./Scripts/install.sh
 - chmod a+x ./Scripts/build.sh
-webhooks: https://canary.discordapp.com/api/webhooks/256484026498547712/JUZ9HyVQ9TKCOfVxtdsjx3PkwfyUVcv6vbcw920X3MipjjRCmyibbQ1e0PYV13XqsvHZ/travis
+webhooks: https://canary.discordapp.com/api/webhooks/256484026498547712/JUZ9HyVQ9TKCOfVxtdsjx3PkwfyUVcv6vbcw920X3MipjjRCmyibbQ1e0PYV13XqsvHZ/travis-ci
 sudo: required
 install:
 - ./Scripts/install.sh
