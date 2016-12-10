@@ -49,12 +49,22 @@ public class Character : MonoBehaviour {
             {
             int nbCoins = Random.Range(minCoin, maxCoin);
             for (int i = 0; i < nbCoins; i++)
-            {
-                float randomX = Random.Range(0.0f, 2.0f) - 1.0f;
-                float randomY = Random.Range(0.0f, 2.0f) - 1.0f;
-                Vector2 posCoin = new Vector2(transform.position.x + randomX, transform.position.y + randomY);
-                Rigidbody2D coinClone = (Rigidbody2D)Instantiate(coin, posCoin, transform.rotation);
-            }
+                {
+                   float randomX = Random.Range(0.0f, 2.0f) - 1.0f;
+                   float randomY = Random.Range(0.0f, 2.0f) - 1.0f;
+                   Vector2 posCoin = new Vector2(transform.position.x + randomX, transform.position.y + randomY);
+                    Rigidbody2D coinClone = (Rigidbody2D)Instantiate(coin, posCoin, transform.rotation);
+                }
+                int nbXp = Random.Range(minXp, maxXp);
+
+                for (int i = 0; i < nbXp; i++)
+                {
+                    float randomX = Random.Range(0.0f, 2.0f) - 1.0f;
+                    float randomY = Random.Range(0.0f, 2.0f) - 1.0f;
+                    Vector2 posXp = new Vector2(transform.position.x + randomX, transform.position.y + randomY);
+                    Rigidbody2D xpClone = (Rigidbody2D)Instantiate(xp, posXp, transform.rotation);
+                }
+                Destroy(gameObject);
             }
           immuneTime = immunityTime;
         }
