@@ -1,0 +1,50 @@
+Arbre de dialogues
+KYA (FR)
+----------------------
+Que me voulez-vous ?
+
+$Q1 Qui êtes-vous ?
+$Q2 Qu'est-ce qui est arrivé à votre oeil ?
+$Q3 Euh ... non, rien, désolé
+
+$1R Kya, dirigeante de la guilde des voleurs ... et des assassins
+$2R Cela ne vous regarde pas.
+$3R ...
+
+$Q4 Quelle cause soutenez-vous ?
+$Q5 Mais encore ?
+$Q6 Puis-je avoir plus de détails sur votre armée ?
+$Q7 Ce sera tout, merci
+$Q8 Puis-je rejoindre ?
+
+$4R Je cherche gloire et renommée pour la guilde
+$5R Vous n'avez pas à en savoir plus
+$6R A votre avis ? Dans une guilde de voleurs et d'assassins ?
+$7R $3R
+$8R Bien, mais chez nous, tout le monde connait tout le monde. Quel est votre nom ? [Nom du joueur]
+
+****************************************
+Dialogs Tree
+KYA (EN)
+---------------------
+What do you want ?
+
+$Q1 Who are you ?
+$Q2 What has happened to your eye ?
+$Q3 Hunghh ... nothing, sorry
+
+$1R Kya, leader of the guild of thiefs ... and assassins
+$2R You don't have to know
+$3R ...
+
+$Q4 Which cause do you defend ?
+$Q5 What else ?
+$Q6 Can I have more details about your army ?
+$Q7 That's all I've wanted to know, thank you
+$Q8 Can I join your army ?
+
+$4R I'm looking for glory and prosperity for the guild
+$5R You don't have to know more
+$6R At your mind ? In a guild of thiefs and assassins ?
+$7R $3R
+$8R Well, but here, everyone know everyone. What is your name ? [Player name]

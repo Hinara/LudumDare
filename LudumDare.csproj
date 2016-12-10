@@ -77,7 +77,9 @@
   <ItemGroup>
     <Compile Include="Assets\GenerateEnemies.cs" />
     <Compile Include="Assets\Scripts\Character.cs" />
+    <Compile Include="Assets\Scripts\PlayerAttack.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\attackTrigger.cs" />
     <Compile Include="Assets\SpawnEnemies.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

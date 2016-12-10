@@ -1,0 +1,51 @@
+﻿Arbre de dialogues
+CONNER (FR)
+------------------------
+... Umm ? Oh, salutions !
+Je vois que tu as trouvé ton chemin vers ma ... vers LA lumière !
+ 
+$Q1 Qui êtes-vous ?
+$Q2 Que diriez-vous d'un duel à l'épée ?
+$Q3 Euh ... non, rien, désolé
+ 
+$1R Je suis le grand capitaine Conner. Mon talent n'as d'égal que la grandeur de mon armée
+$2R Ahah ! Je voit que vous ne manquez pas d'audace ! J'aime ça ! Gardez-là
+$3R Pas de soucis, je sais que vous ferez le bon choix
+ 
+$Q4 Quelle cause soutenez-vous ?
+$Q5 Mais encore ?
+$Q6 Puis-je avoir plus de détails sur votre armée ?
+$Q7 Ce sera tout, merci
+$Q8 Puis-je rejoindre ?
+ 
+$4R Trop de désastres sont liés à la magie, je voudrait savoir mes citoyens à l'abris de ce terrible fléau
+$5R Si j'ai atteint ce rang, c'est grâce à mes victoires, à la confience que le roi met en moi et que je met en mon armée
+$6R Mon armée est constituée de grands et valeureux soldats. Mais je sais que vous avez les compétences pour la rejoindre
+$7R $3R
+$8R Avec plaisir, cela ne vous coutera qu'un serment d'allégence et votre nom [Nom du joueur]
+***********************************
+Dialogs Tree
+CONNER (EN)
+----------------------
+...uhm? Oh, hello!
+I see that you found a way towards my... toward THE light
+ 
+$Q1 Who are you ?
+$Q2 Do you mind me joining you for a swordfight?
+$Q3 Hunghh ... no, nothing, sorry
+ 
+$1R I am the great captain Conner. My skills are as good as the mightness of my army
+$2R Ahah ! You're quite bold ! I like that ! keep it that way !
+$3R No problem, I know you will make the right choice
+ 
+$Q4 Which cause do you stand for ?
+$Q5 What else ?
+$Q6 Can you tell me more about your army ? //re
+$Q7 That's all I've wanted to know, thank you
+$Q8 Can I join your army ?
+ 
+$4R So many disasters are related to magic, I want my citizens to be safe from this scourge
+$5R If I'm here today, It's thanks to my victories, the trust the king gave me, and the same I give to my soldiers
+$6R My army is made of greats and powerful soldiers. But I know you have the skills to join it !
+$7R $3R
+$8R It will be a pleasure. All I need from you, in return, is a pledge of allegiance and your name [Player name]
