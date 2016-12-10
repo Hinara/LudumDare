@@ -9,14 +9,13 @@ public class slideAway : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		angle = Random.Range(0.0f, 2 * Mathf.PI);
-        Debug.Log(angle);
     }
 	
 	// Update is called once per frame
 	void Update () {
         if (speed > 0)
         {
-            Vector2 newPos = new Vector2(transform.position.x + Mathf.Cos(angle), transform.position.y + Mathf.Sin(angle));
+            Vector2 newPos = new Vector2(this.gameObject.transform.position.x + Mathf.Cos(angle), this.gameObject.transform.position.y + Mathf.Sin(angle));
             transform.position = newPos * speed;
             speed -= frottement;
         }
