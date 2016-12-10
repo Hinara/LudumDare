@@ -14,8 +14,20 @@ public class Character : MonoBehaviour {
     private float immuneTime = 0.0f;
     private bool color_modified = false;
     private Color color;
-	// Use this for initialization
-	void Start () {
+
+    /* For attack */
+    private bool attacking = false;
+    public float attackCd = 0.5f;
+    public float attackDuration = 0.1f;
+    private float attackTime = 0f;
+    public Collider2D attackTrigger;
+
+    private void Awake()
+    {
+        attackTrigger.enabled = false;
+    }
+    // Use this for initialization
+    void Start () {
         color = GetComponent<SpriteRenderer>().color;
     }
 	// Update is called once per frame
@@ -53,7 +65,7 @@ public class Character : MonoBehaviour {
                    float randomX = Random.Range(0.0f, 2.0f) - 1.0f;
                    float randomY = Random.Range(0.0f, 2.0f) - 1.0f;
                    Vector2 posCoin = new Vector2(transform.position.x + randomX, transform.position.y + randomY);
-                    Rigidbody2D coinClone = (Rigidbody2D)Instantiate(coin, posCoin, transform.rotation);
+                   Instantiate(coin, posCoin, transform.rotation);
                 }
                 int nbXp = Random.Range(minXp, maxXp);
 
@@ -61,12 +73,37 @@ public class Character : MonoBehaviour {
                 {
                     float randomX = Random.Range(0.0f, 2.0f) - 1.0f;
                     float randomY = Random.Range(0.0f, 2.0f) - 1.0f;
-                    Vector2 posXp = new Vector2(transform.position.x + randomX, transform.position.y + randomY);
-                    Rigidbody2D xpClone = (Rigidbody2D)Instantiate(xp, posXp, transform.rotation);
+                    Vector2 posXp = new Vector2(gameObject.transform.position.x + randomX, transform.position.y + randomY);
+                    Instantiate(xp, posXp, transform.rotation);
                 }
                 Destroy(gameObject);
             }
           immuneTime = immunityTime;
+        }
+    }
+
+    public void Attack()
+    {
+        if (!attacking)
+        {
+            attacking = true;
+            attackTime = attackCd;
+            attackTrigger.enabled = true;
+        }
+        else if (attacking)
+        {
+            if (attackTrigger.enabled && (attackTime <= (attackCd - attackDuration)))
+            {
+                attackTrigger.enabled = false;
+            }
+            if (attackTime >= 0f)
+            {
+                attackTime -= Time.deltaTime;
+            }
+            else
+            {
+                attacking = false;
+            }
         }
     }
 }
