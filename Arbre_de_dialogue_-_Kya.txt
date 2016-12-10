@@ -1,4 +1,4 @@
-Arbre de dialogues
+﻿Arbre de dialogues
 KYA (FR)
 ----------------------
 Que me voulez-vous ?
@@ -33,7 +33,7 @@ $Q1 Who are you ?
 $Q2 What has happened to your eye ?
 $Q3 Hunghh ... nothing, sorry
 
-$1R Kya, leader of the guild of thiefs ... and assassins
+$1R Kya, leader of the guild of thieves ... and assassins
 $2R You don't have to know
 $3R ...
 
@@ -45,6 +45,6 @@ $Q8 Can I join your army ?
 
 $4R I'm looking for glory and prosperity for the guild
 $5R You don't have to know more
-$6R At your mind ? In a guild of thiefs and assassins ?
+$6R At your mind ? In a guild of thieves and assassins ?
 $7R $3R
 $8R Well, but here, everyone know everyone. What is your name ? [Player name]
