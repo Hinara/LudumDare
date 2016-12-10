@@ -13,4 +13,14 @@ public class Character : MonoBehaviour {
 	void Update () {
 		
 	}
+
+    void Damaged(int dmg)
+    {
+        life -= dmg;
+        print(life);
+        if (life < 0)
+        {
+            Destroy(gameObject);
+        }
+    }
 }
