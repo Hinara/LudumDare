@@ -1,0 +1,49 @@
+﻿Arbre de dialogues
+FLINT (FR)
+---------------------------------
+$I1 Salut l'ami ! Dit-moi, que voudrait-tu savoir ?
+ 
+$Q1 Qui êtes-vous ?
+$Q2 "L'ami" ?
+$Q3 Euh ... non rien, excusez-moi
+ 
+$1R Je me prénomme Meera Dictaraes Flint, mais appelle-moi juste Flint
+$2R Que veut-tu ? Tu me parait déjà sympatique
+$3R Pas de soucis, repasse quand tu veut
+ 
+$Q4 Quelle cause soutenez-vous ?
+$Q5 Mais encore ?
+$Q6 Puis-je avoir plus de détails sur votre armée ?
+$Q7 Ce sera tout, merci
+$Q8 Puis-je rejoindre ?
+ 
+$4R Je souhaite uniquement que tout le monde puisse atteindre ses objectifs, l'ami
+$5R Je ne suis pas Archimage pour rien, voit-tu, ($4R)
+$6R Mon armée et disparate, n'importe qui peut la rejoindre, n'importe qui peut la quitter. Ce qui, comme tu peut le voir, n'est pas chose courante
+$7R $3R
+$8R Bien sûr l'ami ! Signe ici : [Nom du joueur]
+*************************************************************
+Dialogs Tree
+FLINT (EN)
+----------------------------------
+Hi my friend ! Tell me, what do want to know ?
+ 
+$Q1 Who are you ?
+$Q2 "My friend" ? 
+$Q3 Hunghh ... nothing, sorry
+
+$1R My name's Meera Dictaraes Flint, but, just call me Flint
+$2R Hey, you already seem like a friendly guy to me !
+$3R No problem, come again when you want !
+ 
+$Q4 Which cause do you stand for ?
+$Q5 and...? //what else sonne faux... perso je met ca en équivalence.
+$Q6 Can you tell me more about your army ?
+$Q7 That's all I wanted to know, thank you
+$Q8 Can I join your army ?
+ 
+$4R I just want everybody to reach their goals, my friend
+$5R there's a reason why I'm an Archmagus, you know. ($4R)
+$6R My army is disparate, everyone can join it, everyone can leave it. But, as you can see, this is not a common thing
+$7R $3R
+$8R Of course, my friend ! Just sign right here : [Player Name]
