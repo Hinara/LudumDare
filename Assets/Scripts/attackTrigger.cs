@@ -10,7 +10,6 @@ public class attackTrigger : MonoBehaviour {
     {
         if (collision.isTrigger != true && collision.CompareTag("minion"))
         {
-            print("Ok");
             collision.SendMessageUpwards("Damaged", dmg);
         }
     }
