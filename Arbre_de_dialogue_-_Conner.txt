@@ -31,7 +31,7 @@ CONNER (EN)
 I see that you found a way towards my... toward THE light
  
 $Q1 Who are you ?
-$Q2 Do you mind me joining you for a swordfight?
+$Q2 Do you mind me joining you for a duel?
 $Q3 Hunghh ... no, nothing, sorry
  
 $1R I am the great captain Conner. My skills are as good as the mightness of my army
@@ -40,12 +40,12 @@ $3R No problem, I know you will make the right choice
  
 $Q4 Which cause do you stand for ?
 $Q5 What else ?
-$Q6 Can you tell me more about your army ? //re
+$Q6 Can you tell me more about your army ?
 $Q7 That's all I've wanted to know, thank you
 $Q8 Can I join your army ?
  
 $4R So many disasters are related to magic, I want my citizens to be safe from this scourge
-$5R If I'm here today, It's thanks to my victories, the trust the king gave me, and the same I give to my soldiers
-$6R My army is made of greats and powerful soldiers. But I know you have the skills to join it !
+$5R  I wouldn't be here, if I had lost a battle. Thanks to victories and the trust that king gave me, I am able to inspire my soldiers!
+$6R My army is made of great and powerful soldiers. But I know you have the skills to join it !
 $7R $3R
 $8R It will be a pleasure. All I need from you, in return, is a pledge of allegiance and your name [Player name]
