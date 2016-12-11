@@ -137,11 +137,3 @@ public class Character : MonoBehaviour {
         Instantiate(gameObject, position, transform.rotation);
     }
 }
-
-public enum Team 
-{
-    Flint,
-    Conner,
-    Kya,
-    Saria
-}
