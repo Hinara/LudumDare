@@ -1,0 +1,21 @@
+$I1 Witaj, przyjacielu! Powiedz mi, co chciałbyś wiedzieć?
+ 
+$Q1 Kim jesteś?
+$Q2 "Przyjacielu"?
+$Q3 Uhhh... nieważne, wybacz.
+
+$1R Nazywam się Meera Dictaraes Flint, ale możesz mnie zwać Flint.
+$2R Hej, wyglądasz na dobrego druha!
+$3R Nie ma problemu. Wróć, jeżeli będziesz czegoś potrzebował.
+ 
+$Q4 O co właściwie walczycie?
+$Q5 I...?
+$Q6 Czy mógłbyś powiedzieć mi więcej o swojej armii?
+$Q7 To wszystko, co chciałem wiedzieć, dziękuję.
+$Q8 Czy mógłbym dołączyć do twojej armii?
+ 
+$4R Po prostu chcę, aby każdy osiągnął swój cel.
+$5R Jest pewna przyczyna, czemu jestem Arcymagiem. ($4R)
+$6R Moje wojsko jest różnorodne. Każdy może doń dołączyć, lub opuścić je. Niestety, jak widzisz, niewielu się zgłasza.  
+$7R $3R 
+$8R Oczywiśćie, przyjacielu! Po prostu zapisz się tutaj: [Imię Gracza]

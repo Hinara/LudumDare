@@ -1,0 +1,21 @@
+Witaj, jak mogłabym Ci pomóc?
+
+$Q1 Kim jesteś?
+$Q2 Ummm? Skrzydła?
+$Q3 Uhhh... nic takiego, nieważne, wybacz.
+
+$1R Jestem Saria, bohaterka Kalock i dowódca tych ludzi.
+$2R Cóż, przedstawicieli mego gatunku nie jest wielu. Otrzymaliśmy te skrzydła, aby chronić innych.
+$3R Ojej? Już odchodzisz? Mam nadzieję, że spotkamy się ponownie.
+
+$Q4 O co walczysz?
+$Q5  Co jeszcze?
+$Q6 Czy mogłabyś powiedzieć mi coś więcej?
+$Q7 To wszystko co chciałem wiedzieć, dziękuję.
+$Q8 Czy mógłbym dołączyć?
+
+$4R Chcę po prostu zaprowadzićw tym świecie ład. 
+$5R Ummm...? Ummm... Hmmm... wybacz.
+$6R Moje wojsko? Och! Nie, chwilkę, to nie jest moja armia czy coś w tym rodzaju... to po prostu palladyni. Śmierć nie gości w naszych szeregach, gdyż jestem tu, aby wszystkich ochronić.
+$7R $3R
+$8R Bardzo się cieszę, że mogę wziąć cię pod swoje skrzydła. Powiedz mi proszę, jak się nazywasz? [Imię Gracza]

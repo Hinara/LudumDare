@@ -1,0 +1,26 @@
+Ummm... Och! Witaj!
+Widzę, żeś znalazł drogę prowadzącą do... do OŚWIECENIA.
+ 
+$Q1 Kim jesteś?
+$Q2 Czy miałbyś coś przeciwko małemu sparingowi?
+$Q3 Uhhh.... nie, nieważne, wybacz.
+ 
+$1R Jam jest wielki kapitan Conner. Jestem tak sprawny, jak bitna jest moja armia. 
+$2R Och! Jesteś całkiem odważny! Lubię to. No dalej, pokaż na co cię stać!
+$3R Nie ma problemu. Wiem, że dokonasz właściwego wyboru.
+ 
+$Q4O co walczycie?
+$Q5 Co jeszcze?
+$Q6 Możesz powiedzieć mi więcej o tej armii?
+$Q7 To wszystko co chciałem wiedzieć, dziękuję.
+$Q8 Czy mógłbym do was dołączyć?
+ 
+$4R Magia spowodowała wystarczająco wiele problemów. Chcę po prostu, aby moi obywatele byli bezpieczni.
+$5R Nie byłoby mnie tutaj, gdybym przegrał bitwę. Dzięki wielu zwycięstwom oraz zaufaniu, którym obdarzył mnie król, jestem w stanie zainspirować swych ludzi!
+$6R Moja armia składa się ze świetnych wojowników, lecz pewny jestem, że masz w sobie to coś, aby do nas dołączyć!
+$7R $3R
+$4R Magia spowodowała wystarczająco wiele problemów. Chcę po prostu, aby moi obywatele byli bezpieczni.
+$5R Nie byłoby mnie tutaj, gdybym przegrał bitwę. Dzięki wielu zwycięstwom oraz zaufaniu, którym obdarzył mnie król, jestem w stanie zainspirować swych ludzi!
+$6R Moja armia składa się ze świetnych wojowników, lecz pewny jestem, że masz w sobie to coś, aby do nas dołączyć!
+$7R $3R
+$8R Będzie to dla mnie zaszczyt. Potrzeba mi tylko przysięgi twej wierności oraz imienia. [Imię Gracza]

@@ -1,0 +1,21 @@
+$I1 Czego chcesz?
+
+$Q1 Kim jesteś?
+$Q2 Co stało się z twoim okiem?
+$Q3 Uhhh... nieważne, wybacz.
+
+$1R Kya, Przywódczyni Gildii Złodziei... i Zabójców.
+$2R Nie musisz tego wiedzieć.
+$3R ... 
+
+$Q4 Czego bronisz?
+$Q5 Co jeszcze?
+$Q6 Czy mogłabyś podać mi więcej szczegółów o swoim wojsku?
+$Q7 To wszystko co chciałem wiedzieć, dziękuję.
+$Q8 Czy mógłbym dołączyć?
+
+$4R Oczekuję sławy i dobrobytu dla Gildii.
+$5R Nie musisz wiedzieć więcej.
+$6R Hę? Zastanów się, przecież to Gildia Złodziei i Zabójców. 
+$7R $3R
+$8R Cóż, tutaj każdy zna każdego. Jak cię zwą? [Imię Gracza]

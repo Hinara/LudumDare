@@ -34,16 +34,16 @@ $Q3 Hunghh ... nothing, sorry
 
 $1R My name's Meera Dictaraes Flint, but, just call me Flint
 $2R Hey, you already seem like a friendly guy to me !
-$3R No problem, come again when you want !
+$3R No problem! Come again when You want to.
  
 $Q4 Which cause do you stand for ?
-$Q5 and...? //what else sonne faux... perso je met ca en équivalence.
+$Q5 and...?
 $Q6 Can you tell me more about your army ?
 $Q7 That's all I wanted to know, thank you
 $Q8 Can I join your army ?
  
 $4R I just want everybody to reach their goals, my friend
-$5R there's a reason why I'm an Archmagus, you know. ($4R)
+$5R  There's a reason why I'm an Archmagus, you know. ($4R)
 $6R My army is disparate, everyone can join it, everyone can leave it. But, as you can see, this is not a common thing
 $7R $3R
 $8R Of course, my friend ! Just sign right here : [Player Name]

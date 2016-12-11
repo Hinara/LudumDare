@@ -1,0 +1,49 @@
+﻿Arbre de dialogue
+SARIA (FR)
+-------------------------------
+Bienvenue, en quoi puis-je vous aider ?
+
+$Q1 Qui êtes-vous ?
+$Q2 Des ... ailes ? 
+$Q3 Euh ... non, rien, désolé
+
+$1R Je suis Saria, héroine de Kalocks et commandante de ces Hommes
+$2R En effet, nous ne sommes plus très nombreux. Mais si ma race à reçu ces ailes, pour mieux vous protéger
+$3R Oh, vous partez déjà ? J'espére que l'ont se reverra !
+
+$Q4 Quelle cause soutenez-vous ?
+$Q5 Mais encore ?
+$Q6 Puis-je avoir plus de détails sur votre armée ?
+$Q7 Ce sera tout, merci
+$Q8 Puis-je rejoindre ?
+
+$4R Je souhaite juste ammener la lumiére en ce monde
+$5R Hein ? Heu ... désolé
+$6R Mon armée ? Ah, non .. Euh, nous sommes majoritairement composés de paladins. La mort ne connait point nos rangs, car je suis ici pour veiller sur chacun d'entre vous
+$7R $3R
+$8R Je serais ravie de vous prendre sous mon aile. Dit-moi, quel est ton nom ?
+****************************************
+Dialogs tree
+SARIA (EN)
+--------------------------------
+Hello, how can I help you?
+
+$Q1 Who are you?
+$Q2 Hunghh ... wings?
+$Q3 Hunghh ... no, nothing, sorry
+
+$1R I am Saria, heroine of Kalocks and commander of these people
+$2R Well, we are not so many now. But if my kind have received these wings, it's for giving you better protection.
+$3R Oh? You already gone? I hope we will see us again
+
+$Q4 Which cause do you stand for?
+$Q5 What else?
+$Q6 Can you tell me more about your army?
+$Q7 That's all I've wanted to know, thank you
+$Q8 Can I join your army?
+
+$4R I just want to bring the light in this world.
+$5R Humh ? Anh, hughh ... sorry
+$6R My army ? Oh ! No, ... wait ... we are mostly paladins. Death does not know our ranks, because I am here to protect all of you.
+$7R $3R
+$8R I will be overjoyed to take you under my wings. Tell me, what's your name? [Player name]
