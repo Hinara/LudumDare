@@ -215,12 +215,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 033d0d23d5d59e24e8aa94c21ba60fab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  team: 0
+  team: 4
   spawners:
   - {fileID: 114260613018798276}
   - {fileID: 114408265003032634}
   - {fileID: 114525052108580996}
   - {fileID: 114812809230293984}
+  characs: []
+  chief: {fileID: 0}
   intervalleSpawn: 3
 --- !u!114 &114812809230293984
 MonoBehaviour:

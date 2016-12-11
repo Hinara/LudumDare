@@ -34,16 +34,16 @@ public class Character : MonoBehaviour {
         switch (this.team)
             {
             case Team.Flint:
-                color = new Color(50.0f / 255.0f, 200.0f / 255.0f, 120.0f / 255.0f);
+                color = new Color(40.0f / 255.0f, 200.0f / 255.0f, 120.0f / 255.0f);
                 break;
             case Team.Conner:
                 color = new Color(255.0f / 255.0f, 215.0f / 255.0f, 0.0f / 255.0f);
                 break;
             case Team.Kya:
-                color = new Color(165.0f / 255.0f, 42.0f / 255.0f, 42.0f / 255.0f);
+                color = new Color(165.0f / 255.0f, 82.0f / 255.0f, 82.0f / 255.0f);
                 break;
             case Team.Saria:
-                color = new Color(255.0f / 255.0f, 255.0f / 255.0f, 255.0f / 255.0f);
+                color = new Color(200.0f / 255.0f, 255.0f / 45.0f, 255.0f / 255.0f);
                 break;
             default:
                 color = new Color(0.0f / 255.0f, 0.0f / 255.0f, 0.0f / 255.0f);
@@ -53,7 +53,7 @@ public class Character : MonoBehaviour {
     }
 	// Update is called once per frame
 	void Update () {
-		if (immuneTime > 0.0f)
+		if (immuneTime > 0.0f) // Immunité lors d'un coup reçu.
         {
             if (color_modified)
             {
@@ -75,6 +75,7 @@ public class Character : MonoBehaviour {
 
     void Damaged(object[] obj)
     {
+        Debug.Log("NYAN");
         int dmg = (int) obj[0];
         Team team = (Team) obj[1];
         if (team != this.team)
@@ -84,7 +85,7 @@ public class Character : MonoBehaviour {
                 life -= dmg;
                 if (life < 0)
                 {
-                    int nbCoins = Random.Range(minCoin, maxCoin);
+                    int nbCoins = Random.Range(minCoin, maxCoin); // Generate coins...
                     for (int i = 0; i < nbCoins; i++)
                     {
                         float randomX = Random.Range(0.0f, 2.0f) - 1.0f;
@@ -92,7 +93,7 @@ public class Character : MonoBehaviour {
                         Vector2 posCoin = new Vector2(transform.position.x + randomX, transform.position.y + randomY);
                         Instantiate(coin, posCoin, transform.rotation);
                     }
-                    int nbXp = Random.Range(minXp, maxXp);
+                    int nbXp = Random.Range(minXp, maxXp); // ... and xp
                     for (int i = 0; i < nbXp; i++)
                     {
                         float randomX = Random.Range(0.0f, 2.0f) - 1.0f;

@@ -13,10 +13,16 @@ public class SpawnEnemies : MonoBehaviour
     }
 
     // Update is called once per frame
-    public void Spawn(Team team)
+    public void Spawn(Team team, Character charac)
     {
-        int randomEnemy = Random.Range(1, 3);
-        Character toSpawn = (randomEnemy == 1) ? (enemy) : (enemy2);
+        charac.team = team;
+        charac.CharacterSpawn(transform.position);
+    }
+
+    public void Spawn(Team team, Character[] characs)
+    {
+        int randomEnemy = Random.Range(0, characs.Length);
+        Character toSpawn = characs[randomEnemy];
         toSpawn.team = team;
         toSpawn.CharacterSpawn(transform.position);
     }
