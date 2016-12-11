@@ -5,12 +5,13 @@ using UnityEngine;
 public class attackTrigger : MonoBehaviour {
 
     public int dmg;
+    public Character character;
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.isTrigger != true && collision.CompareTag("minion"))
+        if (collision.isTrigger != true)
         {
-            collision.SendMessageUpwards("Damaged", dmg);
+            collision.SendMessageUpwards("Damaged", new object[2] { dmg, character.team});
         }
     }
 }

@@ -15,6 +15,8 @@ public class Character : MonoBehaviour {
     private bool color_modified = false;
     private Color color;
 
+    public Team team;
+
     /* For attack */
     private bool attacking = false;
     public float attackCd = 0.5f;
@@ -27,8 +29,27 @@ public class Character : MonoBehaviour {
         attackTrigger.enabled = false;
     }
     // Use this for initialization
-    void Start () {
-        color = GetComponent<SpriteRenderer>().color;
+    void Start ()
+    {
+        switch (this.team)
+            {
+            case Team.Flint:
+                color = new Color(50.0f / 255.0f, 200.0f / 255.0f, 120.0f / 255.0f);
+                break;
+            case Team.Conner:
+                color = new Color(255.0f / 255.0f, 215.0f / 255.0f, 0.0f / 255.0f);
+                break;
+            case Team.Kya:
+                color = new Color(165.0f / 255.0f, 42.0f / 255.0f, 42.0f / 255.0f);
+                break;
+            case Team.Saria:
+                color = new Color(255.0f / 255.0f, 255.0f / 255.0f, 255.0f / 255.0f);
+                break;
+            default:
+                color = new Color(0.0f / 255.0f, 0.0f / 255.0f, 0.0f / 255.0f);
+                break;
+            }
+        GetComponent<SpriteRenderer>().color = color;
     }
 	// Update is called once per frame
 	void Update () {
@@ -52,33 +73,37 @@ public class Character : MonoBehaviour {
         }
     }
 
-    void Damaged(int dmg)
+    void Damaged(object[] obj)
     {
-        if (immuneTime <= 0.0f)
-        { 
-          life -= dmg;
-          if (life < 0)
+        int dmg = (int) obj[0];
+        Team team = (Team) obj[1];
+        if (team != this.team)
+        {
+            if (immuneTime <= 0.0f)
             {
-            int nbCoins = Random.Range(minCoin, maxCoin);
-            for (int i = 0; i < nbCoins; i++)
+                life -= dmg;
+                if (life < 0)
                 {
-                   float randomX = Random.Range(0.0f, 2.0f) - 1.0f;
-                   float randomY = Random.Range(0.0f, 2.0f) - 1.0f;
-                   Vector2 posCoin = new Vector2(transform.position.x + randomX, transform.position.y + randomY);
-                   Instantiate(coin, posCoin, transform.rotation);
+                    int nbCoins = Random.Range(minCoin, maxCoin);
+                    for (int i = 0; i < nbCoins; i++)
+                    {
+                        float randomX = Random.Range(0.0f, 2.0f) - 1.0f;
+                        float randomY = Random.Range(0.0f, 2.0f) - 1.0f;
+                        Vector2 posCoin = new Vector2(transform.position.x + randomX, transform.position.y + randomY);
+                        Instantiate(coin, posCoin, transform.rotation);
+                    }
+                    int nbXp = Random.Range(minXp, maxXp);
+                    for (int i = 0; i < nbXp; i++)
+                    {
+                        float randomX = Random.Range(0.0f, 2.0f) - 1.0f;
+                        float randomY = Random.Range(0.0f, 2.0f) - 1.0f;
+                        Vector2 posXp = new Vector2(gameObject.transform.position.x + randomX, transform.position.y + randomY);
+                        Instantiate(xp, posXp, transform.rotation);
+                    }
+                    Destroy(gameObject);
                 }
-                int nbXp = Random.Range(minXp, maxXp);
-
-                for (int i = 0; i < nbXp; i++)
-                {
-                    float randomX = Random.Range(0.0f, 2.0f) - 1.0f;
-                    float randomY = Random.Range(0.0f, 2.0f) - 1.0f;
-                    Vector2 posXp = new Vector2(gameObject.transform.position.x + randomX, transform.position.y + randomY);
-                    Instantiate(xp, posXp, transform.rotation);
-                }
-                Destroy(gameObject);
+                immuneTime = immunityTime;
             }
-          immuneTime = immunityTime;
         }
     }
 
@@ -106,4 +131,17 @@ public class Character : MonoBehaviour {
             }
         }
     }
+
+    public void CharacterSpawn(Vector2 position)
+    {
+        Instantiate(gameObject, position, transform.rotation);
+    }
+}
+
+public enum Team 
+{
+    Flint,
+    Conner,
+    Kya,
+    Saria
 }
