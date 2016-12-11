@@ -7,5 +7,6 @@ public enum Team
     Flint,
     Conner,
     Kya,
-    Saria
+    Saria,
+    Neutral
 }

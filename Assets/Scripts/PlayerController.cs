@@ -24,13 +24,13 @@ public class PlayerController : MonoBehaviour {
             character.Attack();
         }
         Vector2 temp = transform.position;
-            if (Input.GetKey("up"))
+            if (Input.GetKey("z"))
                 temp.y += speed;
-            if (Input.GetKey("down"))
+            if (Input.GetKey("s"))
                 temp.y -= speed;
-            if (Input.GetKey("left"))
+            if (Input.GetKey("q"))
                 temp.x -= speed;
-            if (Input.GetKey("right"))
+            if (Input.GetKey("d"))
                 temp.x += speed;
             transform.position = temp;
     }

@@ -221,7 +221,7 @@ MonoBehaviour:
   - {fileID: 114408265003032634}
   - {fileID: 114525052108580996}
   - {fileID: 114812809230293984}
-  intervalleSpawn: 3
+  intervalleSpawn: 10
 --- !u!114 &114812809230293984
 MonoBehaviour:
   m_ObjectHideFlags: 1
