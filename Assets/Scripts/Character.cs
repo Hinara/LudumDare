@@ -84,6 +84,21 @@ public class Character : MonoBehaviour {
                 GetComponent<SpriteRenderer>().color = new Color(color.r, color.g, color.b, 1F);
             }
         }
+        if (attacking)
+        {
+            if (attackTrigger.enabled && (attackTime <= (attackCd - attackDuration)))
+            {
+                attackTrigger.enabled = false;
+            }
+            if (attackTime >= 0f)
+            {
+                attackTime -= Time.deltaTime;
+            }
+            else
+            {
+                attacking = false;
+            }
+        }
     }
 
     void Damaged(object[] obj)
@@ -129,21 +144,6 @@ public class Character : MonoBehaviour {
             attackTime = attackCd;
             attackTrigger.enabled = true;
         }
-        else if (attacking)
-        {
-            if (attackTrigger.enabled && (attackTime <= (attackCd - attackDuration)))
-            {
-                attackTrigger.enabled = false;
-            }
-            if (attackTime >= 0f)
-            {
-                attackTime -= Time.deltaTime;
-            }
-            else
-            {
-                attacking = false;
-            }
-        }
     }
 
     public void CharacterSpawn(Vector2 position)
@@ -154,5 +154,13 @@ public class Character : MonoBehaviour {
     public float getSpeed()
     {
         return (speed);
+    }
+    public bool isAttacking()
+    {
+        return (this.attacking);
+    }
+    public bool isInvincible()
+    {
+        return (this.immuneTime > 0.0f);
     }
 }

@@ -18,24 +18,36 @@ public class ennemyAI : MonoBehaviour {
     {
         if (target != null)
         {
-            Quaternion quat = transform.rotation;
-            quat.SetFromToRotation(Vector3.right, (target.transform.position - transform.position));
-            transform.rotation = quat;
-            Vector2 temp = transform.position;
-            temp.y =  temp.y + (Mathf.Sin(quat.eulerAngles.z) * 0.02f);
-            temp.x = temp.x + (Mathf.Cos(quat.eulerAngles.z) * 0.02f);
-            transform.position = temp;
-
+            if (target.gameObject == null)
+            {
+                target = null;
+            }
+            else if (!parent.isAttacking() && Vector2.Distance(target.transform.position, parent.transform.position) < 1.0f && !target.isInvincible())
+            {
+                parent.Attack();
+                Quaternion quat = transform.rotation;
+                quat.SetFromToRotation(Vector3.right, (target.transform.position - transform.position));
+                transform.rotation = quat;
+            }
+            else
+            {
+                Quaternion quat = transform.rotation;
+                quat.SetFromToRotation(Vector3.right, (target.transform.position - transform.position));
+                transform.rotation = quat;
+                Vector2 temp = transform.position;
+                temp.y = temp.y + (Mathf.Sin(quat.eulerAngles.z) * 0.02f);
+                temp.x = temp.x + (Mathf.Cos(quat.eulerAngles.z) * 0.02f);
+                transform.position = temp;
+            }
         }
         else
         {
             Quaternion quat = transform.rotation;
-            quat.SetFromToRotation(Vector3.right, (Vector3.zero - transform.position));
+            quat.SetFromToRotation(Vector3.right, -transform.position);
             transform.rotation = quat;
             Vector2 temp = transform.position;
             temp.y = temp.y + (Mathf.Sin(quat.eulerAngles.z) * 0.02f);
             temp.x = temp.x + (Mathf.Cos(quat.eulerAngles.z) * 0.02f);
-            //Debug.Break();
             transform.position = temp;
         }
     }

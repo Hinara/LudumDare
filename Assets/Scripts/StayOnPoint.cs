@@ -15,7 +15,6 @@ public class StayOnPoint : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         Vector2 temp = transform.position;
-        Debug.Log(transform.position.y);
         if (Mathf.Abs(cible.y - transform.position.y) > 0.1f)
         {
             if (cible.y > transform.position.y)
