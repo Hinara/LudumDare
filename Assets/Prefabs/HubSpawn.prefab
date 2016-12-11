@@ -223,7 +223,7 @@ MonoBehaviour:
   - {fileID: 114812809230293984}
   characs: []
   chief: {fileID: 0}
-  intervalleSpawn: 3
+  intervalleSpawn: 10
 --- !u!114 &114812809230293984
 MonoBehaviour:
   m_ObjectHideFlags: 1

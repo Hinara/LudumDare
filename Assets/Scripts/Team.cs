@@ -8,5 +8,5 @@ public enum Team
     Conner,
     Kya,
     Saria,
-    Neutral,
+    Neutral
 }
