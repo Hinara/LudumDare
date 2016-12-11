@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class SpawnEnemies : MonoBehaviour
 {
-    [Tooltip("Prefab of the enemy to spawn.")]
-    public Character enemy;
-    public Character enemy2;
     // Use this for initialization
     void Start()
     {

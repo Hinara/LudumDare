@@ -2,26 +2,37 @@
 using System.Collections.Generic;
 using UnityEngine;
 public class Character : MonoBehaviour {
-
+    [Tooltip("Minimum coins the character can drop.")]
     public int minCoin;
+    [Tooltip("Maximum coins the character can drop.")]
     public int maxCoin;
-    public int maxXp;
+    [Tooltip("Minimum xp the character can drop.")]
     public int minXp;
+    [Tooltip("Maximum xps the character can drop.")]
+    public int maxXp;
+    [Tooltip("Character's life.")]
     public int life;
+    [Tooltip("Rigidbody of the coin.")]
     public Rigidbody2D coin;
+    [Tooltip("Rigidbody of the xp.")]
     public Rigidbody2D xp;
+    [Tooltip("The time the character is immortal after being hurt.")]
     public float immunityTime = 0.6f;
     private float immuneTime = 0.0f;
     private bool color_modified = false;
     private Color color;
 
+    [Tooltip("The team the character belong to")]
     public Team team;
 
     /* For attack */
     private bool attacking = false;
+    [Tooltip("Cooldown between 2 attacks.")]
     public float attackCd = 0.5f;
+    [Tooltip("Attack duration.")]
     public float attackDuration = 0.1f;
     private float attackTime = 0f;
+    [Tooltip("Collider 2D of the hit detection.")]
     public Collider2D attackTrigger;
 
     private void Awake()

@@ -3,11 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class hubSpawn : MonoBehaviour {
+    [Tooltip("Team the hub belong to.")]
     public Team team;
+    [Tooltip("List of spawners the hub have.")]
     public SpawnEnemies[] spawners;
+    [Tooltip("List of characters who can spawn.")]
     public Character[] characs;
+    [Tooltip("Chief of the hub.")]
     public Character chief;
-    [Tooltip("Intervalle between each enemies spawn in secondes.")]
+    [Tooltip("Intervalle between each characters spawn in secondes.")]
     public float intervalleSpawn;
     private float iniTime;
     // Use this for initialization
