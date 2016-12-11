@@ -40,6 +40,7 @@ GameObject:
   - component: {fileID: 50280909289889722}
   - component: {fileID: 58764152794995006}
   - component: {fileID: 114289569535658662}
+  - component: {fileID: 114451278587277856}
   m_Layer: 0
   m_Name: Flint
   m_TagString: Damageable
@@ -135,16 +136,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minCoin: 200
   maxCoin: 500
-  maxXp: 500
   minXp: 1000
+  maxXp: 500
   life: 500
   coin: {fileID: 50075166168253066, guid: 90e22b45da5518a46b0558470ccaf8cd, type: 2}
   xp: {fileID: 50451258681554534, guid: f38e2211d4921d344a7ccf613e590f0a, type: 2}
   immunityTime: 0.6
+  speed: 0.1
   team: 0
   attackCd: 0.5
   attackDuration: 0.1
   attackTrigger: {fileID: 61635334271907188}
+--- !u!114 &114451278587277856
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1503123355357230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e7f240214ab425468784d88f8348c61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  charac: {fileID: 114289569535658662}
 --- !u!114 &114475433445297978
 MonoBehaviour:
   m_ObjectHideFlags: 1

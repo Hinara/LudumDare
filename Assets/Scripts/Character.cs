@@ -21,6 +21,8 @@ public class Character : MonoBehaviour {
     private float immuneTime = 0.0f;
     private bool color_modified = false;
     private Color color;
+    [Tooltip("Speed of the character.")]
+    public float speed;
 
     [Tooltip("The team the character belong to")]
     public Team team;
@@ -147,5 +149,10 @@ public class Character : MonoBehaviour {
     public void CharacterSpawn(Vector2 position)
     {
         Instantiate(gameObject, position, transform.rotation);
+    }
+
+    public float getSpeed()
+    {
+        return (speed);
     }
 }

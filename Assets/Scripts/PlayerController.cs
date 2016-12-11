@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
-    public float speed;
+    private float speed;
 
     public Camera camera;
     public Character character;
     // Use this for initialization
     void Start () {
+        speed = character.getSpeed();
     }
 
     // Update is called once per frame
