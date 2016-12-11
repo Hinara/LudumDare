@@ -103,10 +103,9 @@ public class Character : MonoBehaviour {
 
     void Damaged(object[] obj)
     {
-        Debug.Log("NYAN");
         int dmg = (int) obj[0];
         Team team = (Team) obj[1];
-        if (team != this.team)
+        if (true)// team != this.team)
         {
             if (immuneTime <= 0.0f)
             {
