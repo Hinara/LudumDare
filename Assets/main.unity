@@ -227,7 +227,7 @@ MonoBehaviour:
   xp: {fileID: 50451258681554534, guid: f38e2211d4921d344a7ccf613e590f0a, type: 2}
   immunityTime: 0.6
   speed: 0.1
-  team: 2
+  team: 4
   damages: 50
   attackCd: 1
   attackRangeCd: 2
@@ -354,13 +354,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 359713050}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
   m_LocalPosition: {x: -0.01875095, y: 0.0931177, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!4 &512413513 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4644318734879118, guid: a0ac491537ef2e549b1d5640a28ea5c8,
@@ -392,6 +392,11 @@ Prefab:
         type: 2}
       propertyPath: intervalleSpawn
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 212500426478708942, guid: a0ac491537ef2e549b1d5640a28ea5c8,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a0ac491537ef2e549b1d5640a28ea5c8, type: 2}
@@ -442,6 +447,11 @@ Prefab:
         type: 2}
       propertyPath: intervalleSpawn
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 212500426478708942, guid: a0ac491537ef2e549b1d5640a28ea5c8,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a0ac491537ef2e549b1d5640a28ea5c8, type: 2}
@@ -497,6 +507,11 @@ Prefab:
         type: 2}
       propertyPath: intervalleSpawn
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 212500426478708942, guid: a0ac491537ef2e549b1d5640a28ea5c8,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a0ac491537ef2e549b1d5640a28ea5c8, type: 2}

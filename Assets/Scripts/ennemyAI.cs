@@ -95,42 +95,4 @@ public class ennemyAI : MonoBehaviour
     {
         return (this.target);
     }
-
-    private void returnValueImportant(Character charac)
-    {
-        int value;
-    }
-
-    public Character closestEnnemy()
-    {
-        GameObject[] damageable;
-        damageable = GameObject.FindGameObjectsWithTag("Damageable");
-        Character closest;
-        closest = null;
-        foreach (GameObject obj in damageable)
-        {
-            Character chara;
-            chara = obj.GetComponent<Character>();
-            if (chara != null)
-            {
-                if (chara.team != parent.team)
-                {
-                    if (closest != null)
-                    {
-                        if (Vector2.Distance(gameObject.transform.position, chara.gameObject.transform.position) <
-                            Vector2.Distance(gameObject.transform.position, closest.gameObject.transform.position))
-                        {
-                            closest = chara;
-                        }
-                    }
-                    else
-                    {
-                        closest = chara;
-                    }
-                }
-            }
-        }
-
-        return closest;
-    }
 }
