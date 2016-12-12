@@ -57,7 +57,6 @@ public class Character : MonoBehaviour {
     // Use this for initialization
     void Start ()
     {
-        lifeMax = life;
         switch (this.team)
             {
             case Team.Flint:
@@ -65,9 +64,11 @@ public class Character : MonoBehaviour {
                 break;
             case Team.Conner:
                 color = new Color(255.0f / 255.0f, 215.0f / 255.0f, 0.0f / 255.0f);
+                life += 50;
                 break;
             case Team.Kya:
                 color = new Color(165.0f / 255.0f, 82.0f / 255.0f, 82.0f / 255.0f);
+                life -= 20;
                 break;
             case Team.Saria:
                 color = new Color(200.0f / 255.0f, 255.0f / 45.0f, 255.0f / 255.0f);
@@ -76,6 +77,7 @@ public class Character : MonoBehaviour {
                 color = new Color(0.0f / 255.0f, 0.0f / 255.0f, 0.0f / 255.0f);
                 break;
             }
+        lifeMax = life;
         GetComponent<SpriteRenderer>().color = color;
     }
 	// Update is called once per frame
@@ -128,14 +130,14 @@ public class Character : MonoBehaviour {
                 {
                     if (charac.isPlayer())
                     {
-                        if (team == Team.Conner && charac.getRelationConner() > -2)
+                        if (this.team == Team.Conner && charac.getRelationConner() > -2)
                             charac.setRelationConner(2);
-                        if (team == Team.Flint && charac.getRelationFlint() > -2)
+                        if (this.team == Team.Flint && charac.getRelationFlint() > -2)
                             charac.setRelationFlint(2);
-                        if (team == Team.Saria && charac.getRelationSaria() > -2)
+                        if (this.team == Team.Saria && charac.getRelationSaria() > -2)
                             charac.setRelationSaria(2);
-                        if (team == Team.Kya && charac.getRelationKya() > -2)
-                            print("NYAN"); //charac.setRelationKya(2);
+                        if (this.team == Team.Kya && charac.getRelationKya() > -2)
+                            charac.setRelationKya(2);
                         int nbCoins = Random.Range(minCoin, maxCoin); // Generate coins...
                         for (int i = 0; i < nbCoins; i++)
                         {
