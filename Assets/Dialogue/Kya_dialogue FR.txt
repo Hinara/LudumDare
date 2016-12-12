@@ -1,0 +1,25 @@
+﻿Arbre de dialogues
+KYA (FR)
+----------------------
+Que me voulez-vous ?
+   Qui êtes-vous ?
+   Qu'est-ce qui est arrivé à votre oeil ?
+   Euh ... non, rien, désolé
+
+   Kya, dirigeante de la guilde des voleurs ... et des assassins
+   Cela ne vous regarde pas.
+   ...
+
+   Quelle cause soutenez-vous ?
+   Mais encore ?
+   Puis-je avoir plus de détails sur votre armée ?
+   Ce sera tout, merci
+   Puis-je rejoindre ?
+
+   Je cherche gloire et renommée pour la guilde
+   Vous n'avez pas à en savoir plus
+   A votre avis ? Dans une guilde de voleurs et d'assassins ?
+   ...
+   Bien, mais chez nous, tout le monde connait tout le monde. Quel est votre nom ? [Nom du joueur]
+
+   Un autre Personnage se tient au loin...

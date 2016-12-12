@@ -1,0 +1,25 @@
+﻿Arbre de dialogues
+CONNER (FR)
+------------------------
+... Umm ? Oh, salutions ! Je vois que tu as trouvé ton chemin vers ma ... vers LA lumière !
+Qui êtes-vous ?
+Que diriez-vous d'un duel à l'épée ?
+Euh ... non, rien, désolé
+ 
+Je suis le grand capitaine Conner. Mon talent n'as d'égal que la grandeur de mon armée
+Ahah ! Je voit que vous ne manquez pas d'audace ! J'aime ça ! Gardez-là
+Pas de soucis, je sais que vous ferez le bon choix
+ 
+Quelle cause soutenez-vous ?
+Mais encore ?
+Puis-je avoir plus de détails sur votre armée ?
+Ce sera tout, merci
+Puis-je rejoindre ?
+ 
+Trop de désastres sont liés à la magie, je voudrait savoir mes citoyens à l'abris de ce terrible fléau
+Si j'ai atteint ce rang, c'est grâce à mes victoires, à la confience que le roi met en moi et que je met en mon armée
+Mon armée est constituée de grands et valeureux soldats. Mais je sais que vous avez les compétences pour la rejoindre
+Pas de soucis, je sais que vous ferez le bon choix
+Avec plaisir, cela ne vous coutera qu'un serment d'allégence et votre nom [Nom du joueur]
+
+   Un autre Personnage se tient au loin...

@@ -1,0 +1,24 @@
+﻿Dialogs tree
+SARIA (EN)
+--------------------------------
+Hello, how can I help you?
+
+$Q1 Who are you?
+$Q2 Hunghh ... wings?
+$Q3 Hunghh ... no, nothing, sorry
+
+$1R I am Saria, heroine of Kalocks and commander of these people
+$2R Well, we are not so many now. But if my kind have received these wings, it's for giving you better protection.
+$3R Oh? You already gone? I hope we will see us again
+
+$Q4 Which cause do you stand for?
+$Q5 What else?
+$Q6 Can you tell me more about your army?
+$Q7 That's all I've wanted to know, thank you
+$Q8 Can I join your army?
+
+$4R I just want to bring the light in this world.
+$5R Humh ? Anh, hughh ... sorry
+$6R My army ? Oh ! No, ... wait ... we are mostly paladins. Death does not know our ranks, because I am here to protect all of you.
+$7R $3R
+$8R I will be overjoyed to take you under my wings. Tell me, what's your name? [Player name]

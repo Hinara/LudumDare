@@ -1,0 +1,25 @@
+﻿Arbre de dialogues
+FLINT (FR)
+---------------------------------
+Salut l'ami ! Dit-moi, que voudrais-tu savoir ?
+Qui êtes-vous ?
+"L'ami" ?
+Euh ... non rien, excusez-moi
+
+Je me prénomme Meera Dictaraes Flint, mais appelle-moi juste Flint
+Que veux-tu ? Tu me parait déjà sympatique
+Pas de soucis, repasse quand tu veux
+
+Quelle cause soutenez-vous ?
+Mais encore ?
+Puis-je avoir plus de détails sur votre armée ?
+Ce sera tout, merci
+Puis-je rejoindre ?
+ 
+Je souhaite uniquement que tout le monde puisse atteindre ses objectifs, l'ami
+Je ne suis pas Archimage pour rien, vois-tu, Je souhaite uniquement que tout le monde puisse atteindre ses objectifs, l'ami
+Mon armée et disparate, n'importe qui peut la rejoindre, n'importe qui peut la quitter. Ce qui, comme tu peut le voir, n'est pas chose courante
+Pas de soucis, repasse quand tu veux
+Bien sûr l'ami ! Signe ici : [Nom du joueur]
+
+   Un autre Personnage se tient au loin...

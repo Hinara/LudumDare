@@ -1,0 +1,25 @@
+﻿Arbre de dialogue
+SARIA (FR)
+-------------------------------
+Bienvenue, en quoi puis-je vous aider ?
+   Qui êtes-vous ?
+   Des ... ailes ? 
+   Euh ... non, rien, désolé
+
+   Je suis Saria, héroine de Kalocks et commandante de ces Hommes
+   En effet, nous ne sommes plus très nombreux. Mais si ma race à reçu ces ailes, pour mieux vous protéger
+   Oh, vous partez déjà ? J'espére que l'ont se reverra !
+
+   Quelle cause soutenez-vous ?
+   Mais encore ?
+   Puis-je avoir plus de détails sur votre armée ?
+   Ce sera tout, merci
+   Puis-je rejoindre ?
+
+   Je souhaite juste ammener la lumiére en ce monde
+   Hein ? Heu ... désolé
+   Mon armée ? Ah, non .. Euh, nous sommes majoritairement composés de paladins. La mort ne connait point nos rangs, car je suis ici pour veiller sur chacun d'entre vous
+   Oh, vous partez déjà ? J'espére que l'ont se reverra !
+   Je serais ravie de vous prendre sous mon aile. Dit-moi, quel est ton nom ?
+   
+   Un autre Personnage se tient au loin...
