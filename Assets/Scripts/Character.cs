@@ -209,9 +209,28 @@ public class Character : MonoBehaviour {
             obj.GetComponent<Projectile>().setLauncher(this);
             rb = obj.GetComponent<Rigidbody2D>();
             rb.velocity = targetDir.normalized * 20.0f;
-            //rb.AddForce(temp, ForceMode2D.Impulse);
             attacking = true;
             attackTime = attackRangeCd;
+        }
+    }
+
+    public void MassRangeAttack(Vector2 targetPos)
+    {
+        if (!attacking)
+        {
+            float angle = -60.0f;
+            while (angle <= 60.0f)
+            {
+                print(angle);
+                Vector2 targetDir = Quaternion.AngleAxis(angle, Vector3.back) * (targetPos - ((Vector2)transform.position));
+                GameObject obj = Instantiate(projectile.gameObject, transform.position, transform.rotation) as GameObject;
+                obj.GetComponent<Projectile>().setLauncher(this);
+                Rigidbody2D rb = obj.GetComponent<Rigidbody2D>();
+                rb.velocity = targetDir.normalized * 5.0f;
+                attacking = true;
+                attackTime = attackRangeCd;
+                angle = angle + 30.0f;
+            }
         }
     }
 

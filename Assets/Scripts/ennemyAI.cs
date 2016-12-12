@@ -120,7 +120,7 @@ public class ennemyAI : MonoBehaviour
                             moveForward();
                         }
                         break;
-                    case MinonType.Archer:
+                    case MinonType.Range:
                         if (Vector2.Distance(target.transform.position, parent.transform.position) < 1f)
                         {
                             moveBackward();
@@ -128,6 +128,16 @@ public class ennemyAI : MonoBehaviour
                         else if (Vector2.Distance(target.transform.position, parent.transform.position) < 3f)
                         {
                             parent.RangeAttack(target.transform.position);
+                        }
+                        else
+                        {
+                            moveForward();
+                        }
+                        break;
+                    case MinonType.Mass_Range:
+                        if (Vector2.Distance(target.transform.position, parent.transform.position) < 1.5f)
+                        {
+                            parent.MassRangeAttack(target.transform.position);
                         }
                         else
                         {

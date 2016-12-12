@@ -231,6 +231,8 @@ MonoBehaviour:
   - {fileID: 114586570383367854, guid: 1174b5f817127ae4bbdbd120808f6876, type: 2}
   - {fileID: 114647267197037166, guid: f6fdb7b21127d164c86a75d262264f7b, type: 2}
   - {fileID: 114828746576219598, guid: b691d7304ed066f4989696d0ad371313, type: 2}
+  - {fileID: 114455902450220626, guid: f27cc00ac0bf90a488fbdb539bde0eeb, type: 2}
+  - {fileID: 114192290395914762, guid: 9d1f6713c29a04c4caeab90d8d1c05fc, type: 2}
   chief: {fileID: 0}
   intervalleSpawn: 10
 --- !u!212 &212144658719873226

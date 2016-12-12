@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public enum MinonType {
-    Archer,
+    Range,
+    Mass_Range,
     Spearman,
     Swordman,
-    Healer
+    Healer,
 }

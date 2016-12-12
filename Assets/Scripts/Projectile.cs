@@ -10,8 +10,11 @@ public class Projectile : MonoBehaviour {
     {
         if (collider.gameObject.GetComponent<Projectile>() != null)
         {
-            Destroy(collider.gameObject);
-            Destroy(this.gameObject);
+            if (collider.gameObject.GetComponent<Projectile>().getLauncher() != this.getLauncher())
+            {
+                Destroy(collider.gameObject);
+                Destroy(this.gameObject);
+            }
         }
         else if (collider.CompareTag("Damageable"))
         {
