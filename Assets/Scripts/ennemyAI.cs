@@ -107,6 +107,19 @@ public class ennemyAI : MonoBehaviour
                             moveForward();
                         }
                         break;
+                    case MinonType.Assassin:
+                        if (Vector2.Distance(target.transform.position, parent.transform.position) < 0.8f)
+                        {
+                            if (!parent.isAttacking() && !target.isInvincible())
+                            {
+                                parent.Attack();
+                            }
+                        }
+                        else
+                        {
+                            moveForward();
+                        }
+                        break;
                     case MinonType.Spearman:
                         if (Vector2.Distance(target.transform.position, parent.transform.position) < 1.0f)
                         {

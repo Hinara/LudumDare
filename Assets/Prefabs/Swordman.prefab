@@ -179,6 +179,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6881ec07d75c47f4bbf849ac4bafff08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  minion: 3
   player: 0
   minCoin: 5
   maxCoin: 21
@@ -189,8 +190,8 @@ MonoBehaviour:
   xp: {fileID: 50451258681554534, guid: f38e2211d4921d344a7ccf613e590f0a, type: 2}
   immunityTime: 0.6
   speed: 0.1
-  team: 0
-  damages: 25
+  team: 1
+  damages: 40
   attackCd: 0.5
   attackRangeCd: 2
   attackDuration: 1
@@ -207,7 +208,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48da722445c84614c83cee339af1f05c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 2
+  type: 3
   speed: 0.02
 --- !u!114 &114591136474006012
 MonoBehaviour:

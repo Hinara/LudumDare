@@ -35,12 +35,18 @@ public class ennemiDetection : MonoBehaviour {
             if (chara != null)
             {
                 //Verify thath the ennemy is from a diffrent team
-                if (my_chara.team != chara.team && returnValueImportant(chara, my_chara) != -1)
+                if (my_chara.team != chara.team && returnValueImportant(chara, my_chara) != -1 && my_chara.getMinionType() != MinonType.Assassin
+                    || (my_chara.team != chara.team && my_chara.getMinionType() == MinonType.Assassin && (chara.getMinionType() == MinonType.Healer || chara.getMinionType() == MinonType.Range || chara.getMinionType() == MinonType.Mass_Range)))
                 {
                     if (ai.getTarget() != null)
                     {
                         if (returnValueImportant(chara, my_chara) > value)
                         {
+                            if (returnValueImportant(chara, my_chara) > value && my_chara.getMinionType() == MinonType.Assassin && chara.getMinionType() == MinonType.Healer)
+                            {
+                                Debug.Log("Me: " + my_chara.getMinionType());
+                                Debug.Log("Enemy: " + chara.getMinionType());
+                            }
                             value = returnValueImportant(chara, my_chara);
                             ai.setTarget(chara);
                         }

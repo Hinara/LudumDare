@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class Character : MonoBehaviour {
+    [Tooltip("Minion type.")]
+    public MinonType minion;
     [Tooltip("Is the character the player ?.")]
     public bool player;
     [Tooltip("Minimum coins the character can drop.")]
@@ -77,11 +79,9 @@ public class Character : MonoBehaviour {
                 break;
             case Team.Conner:
                 color = new Color(255.0f / 255.0f, 215.0f / 255.0f, 0.0f / 255.0f);
-                life += 50;
                 break;
             case Team.Kya:
                 color = new Color(165.0f / 255.0f, 82.0f / 255.0f, 82.0f / 255.0f);
-                life -= 20;
                 break;
             case Team.Saria:
                 color = new Color(200.0f / 255.0f, 255.0f / 45.0f, 255.0f / 255.0f);
@@ -290,6 +290,10 @@ public class Character : MonoBehaviour {
     public int getLifeMax()
     {
         return (this.lifeMax);
+    }
+    public MinonType getMinionType()
+    {
+        return (minion);
     }
     public void setGoldText(string text)
     {
