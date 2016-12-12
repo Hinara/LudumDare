@@ -2483,6 +2483,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 2132919526}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a0a1a81e5c560e94bbc6a0c12b97ca67, type: 3}
+  m_Script: {fileID: 11500000, guid: d35788981403c9e49a8f06e7b2376be2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  menu: {fileID: 990221595}
+  Bouton: {fileID: 408801264}
