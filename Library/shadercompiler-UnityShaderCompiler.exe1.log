@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< refs/remotes/origin/unity2
 Base path: C:/Program Files/Unity/Editor/Data
 Cmd: getPlatforms
@@ -520,6 +521,8 @@ Cmd: compileSnippet
 Cmd: compileSnippet
   api=9 type=1 insize=737 outsize=0 kw= pd=UNITY_NO_DXT5nm UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA ok=1
 =======
+=======
+>>>>>>> unity
 Base path: C:/Program Files/Unity/Editor/Data
 Cmd: getPlatforms
 Cmd: compileSnippet
@@ -1026,4 +1029,7 @@ Cmd: compileSnippet
   api=4 type=1 insize=737 outsize=326 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA ok=1
 Cmd: compileSnippet
   api=8 type=1 insize=1068 outsize=1158 kw= pd=UNITY_NO_SCREENSPACE_SHADOWS UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING SHADER_API_MOBILE SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA ok=1
+<<<<<<< HEAD
 >>>>>>> Minor changements
+=======
+>>>>>>> unity

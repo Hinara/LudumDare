@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
     protected Character parent;
-    public MinonType type;
-    protected Character target;
 public class ennemyAI : MonoBehaviour {
+    protected Character target;
+    public MinonType type;
 
     public float speed = 0.0f;
     // Use this for initialization
@@ -15,7 +15,6 @@ public class ennemyAI : MonoBehaviour {
         target = null;
     }
 
-    protected void Update()
     {
         if (target != null)
         {
