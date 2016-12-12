@@ -117,7 +117,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 4
+  m_Mass: 2
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -190,7 +190,7 @@ MonoBehaviour:
   xp: {fileID: 50451258681554534, guid: f38e2211d4921d344a7ccf613e590f0a, type: 2}
   immunityTime: 0.6
   speed: 0.1
-  team: 1
+  team: 0
   damages: 40
   attackCd: 0.5
   attackRangeCd: 2
