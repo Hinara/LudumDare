@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 public class Character : MonoBehaviour {
+    [Tooltip("Is the character the player ?.")]
+    public bool player;
     [Tooltip("Minimum coins the character can drop.")]
     public int minCoin;
     [Tooltip("Maximum coins the character can drop.")]
@@ -43,6 +45,10 @@ public class Character : MonoBehaviour {
     public Projectile projectile;
     [Tooltip("Projectile shot by the entity")]
     private int lifeMax;
+    private int relationFlint = -1;
+    private int relationConner = -1;
+    private int relationKya = -1;
+    private int relationSaria = -1;
 
     private void Awake()
     {
@@ -51,7 +57,6 @@ public class Character : MonoBehaviour {
     // Use this for initialization
     void Start ()
     {
-        lifeMax = life;
         switch (this.team)
             {
             case Team.Flint:
@@ -59,9 +64,11 @@ public class Character : MonoBehaviour {
                 break;
             case Team.Conner:
                 color = new Color(255.0f / 255.0f, 215.0f / 255.0f, 0.0f / 255.0f);
+                life += 50;
                 break;
             case Team.Kya:
                 color = new Color(165.0f / 255.0f, 82.0f / 255.0f, 82.0f / 255.0f);
+                life -= 20;
                 break;
             case Team.Saria:
                 color = new Color(200.0f / 255.0f, 255.0f / 45.0f, 255.0f / 255.0f);
@@ -70,11 +77,12 @@ public class Character : MonoBehaviour {
                 color = new Color(0.0f / 255.0f, 0.0f / 255.0f, 0.0f / 255.0f);
                 break;
             }
+        lifeMax = life;
         GetComponent<SpriteRenderer>().color = color;
     }
 	// Update is called once per frame
 	void Update () {
-		if (immuneTime > 0.0f) // Immunité lors d'un coup reçu.
+        if (immuneTime > 0.0f) // Immunité lors d'un coup reçu.
         {
             if (color_modified)
             {
@@ -120,21 +128,32 @@ public class Character : MonoBehaviour {
                 life -= dmg;
                 if (life < 0)
                 {
-                    int nbCoins = Random.Range(minCoin, maxCoin); // Generate coins...
-                    for (int i = 0; i < nbCoins; i++)
+                    if (charac.isPlayer())
                     {
-                        float randomX = Random.Range(0.0f, 2.0f) - 1.0f;
-                        float randomY = Random.Range(0.0f, 2.0f) - 1.0f;
-                        Vector2 posCoin = new Vector2(transform.position.x + randomX, transform.position.y + randomY);
-                        Instantiate(coin, posCoin, transform.rotation);
-                    }
-                    int nbXp = Random.Range(minXp, maxXp); // ... and xp
-                    for (int i = 0; i < nbXp; i++)
-                    {
-                        float randomX = Random.Range(0.0f, 2.0f) - 1.0f;
-                        float randomY = Random.Range(0.0f, 2.0f) - 1.0f;
-                        Vector2 posXp = new Vector2(gameObject.transform.position.x + randomX, transform.position.y + randomY);
-                        Instantiate(xp, posXp, transform.rotation);
+                        if (this.team == Team.Conner && charac.getRelationConner() > -2)
+                            charac.setRelationConner(2);
+                        if (this.team == Team.Flint && charac.getRelationFlint() > -2)
+                            charac.setRelationFlint(2);
+                        if (this.team == Team.Saria && charac.getRelationSaria() > -2)
+                            charac.setRelationSaria(2);
+                        if (this.team == Team.Kya && charac.getRelationKya() > -2)
+                            charac.setRelationKya(2);
+                        int nbCoins = Random.Range(minCoin, maxCoin); // Generate coins...
+                        for (int i = 0; i < nbCoins; i++)
+                        {
+                            float randomX = Random.Range(0.0f, 2.0f) - 1.0f;
+                            float randomY = Random.Range(0.0f, 2.0f) - 1.0f;
+                            Vector2 posCoin = new Vector2(transform.position.x + randomX, transform.position.y + randomY);
+                            Instantiate(coin, posCoin, transform.rotation);
+                        }
+                        int nbXp = Random.Range(minXp, maxXp); // ... and xp
+                        for (int i = 0; i < nbXp; i++)
+                        {
+                            float randomX = Random.Range(0.0f, 2.0f) - 1.0f;
+                            float randomY = Random.Range(0.0f, 2.0f) - 1.0f;
+                            Vector2 posXp = new Vector2(gameObject.transform.position.x + randomX, transform.position.y + randomY);
+                            Instantiate(xp, posXp, transform.rotation);
+                        }
                     }
                     Destroy(gameObject);
                 }
@@ -209,6 +228,10 @@ public class Character : MonoBehaviour {
     {
         return ((life * 100) / lifeMax);
     }
+    public bool isPlayer()
+    {
+        return (player);
+    }
     public Team getTeam()
     {
         return (team);
@@ -229,4 +252,12 @@ public class Character : MonoBehaviour {
     {
         return (this.lifeMax);
     }
+    public int getRelationFlint() { return relationFlint; }
+    public int getRelationSaria() { return relationSaria; }
+    public int getRelationKya() { return relationKya; }
+    public int getRelationConner() { return relationConner; }
+    public void setRelationFlint(int value) { relationFlint += value; }
+    public void setRelationSaria(int value) { relationSaria += value; }
+    public void setRelationKya(int value) { relationKya += value; }
+    public void setRelationConner(int value) { relationConner += value; }
 }
