@@ -192,6 +192,7 @@ MonoBehaviour:
   attackCd: 0.5
   attackDuration: 0.1
   attackTrigger: {fileID: 61381212209792632}
+  projectile: {fileID: 0}
 --- !u!114 &114466313033692490
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -203,6 +204,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48da722445c84614c83cee339af1f05c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  type: 2
   speed: 0.1
 --- !u!114 &114591136474006012
 MonoBehaviour:

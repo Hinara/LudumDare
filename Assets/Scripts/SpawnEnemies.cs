@@ -10,10 +10,10 @@ public class SpawnEnemies : MonoBehaviour
     }
 
     // Update is called once per frame
-    public void Spawn(Team team, Character charac)
+    public GameObject Spawn(Team team, Character charac)
     {
         charac.team = team;
-        charac.CharacterSpawn(transform.position);
+        return charac.CharacterSpawn(transform.position);
     }
 
     public void Spawn(Team team, Character[] characs)

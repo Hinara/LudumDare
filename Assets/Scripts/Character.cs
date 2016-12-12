@@ -31,11 +31,15 @@ public class Character : MonoBehaviour {
     private bool attacking = false;
     [Tooltip("Cooldown between 2 attacks.")]
     public float attackCd = 0.5f;
+    [Tooltip("Cooldown between 2 attacks for range attack.")]
+    public float attackRangeCd = 2f;
     [Tooltip("Attack duration.")]
     public float attackDuration = 0.1f;
     private float attackTime = 0f;
     [Tooltip("Collider 2D of the hit detection.")]
     public Collider2D attackTrigger;
+    [Tooltip("Projectile shot by the entity")]
+    public Projectile projectile;
 
     private void Awake()
     {
@@ -103,7 +107,6 @@ public class Character : MonoBehaviour {
 
     void Damaged(object[] obj)
     {
-        Debug.Log("NYAN");
         int dmg = (int) obj[0];
         Team team = (Team) obj[1];
         if (team != this.team)
@@ -138,17 +141,36 @@ public class Character : MonoBehaviour {
 
     public void Attack()
     {
+        print("Attack");
         if (!attacking)
         {
+            print("Attack2");
             attacking = true;
             attackTime = attackCd;
             attackTrigger.enabled = true;
         }
     }
 
-    public void CharacterSpawn(Vector2 position)
+    public void RangeAttack(Vector2 targetPos)
     {
-        Instantiate(gameObject, position, transform.rotation);
+        if (!attacking)
+        {
+            Vector2 targetDir = (targetPos - ((Vector2)transform.position));
+            GameObject obj;
+            Rigidbody2D rb;
+            obj = Instantiate(projectile.gameObject, transform.position, transform.rotation) as GameObject;
+            obj.GetComponent<Projectile>().setLauncher(this);
+            rb = obj.GetComponent<Rigidbody2D>();
+            rb.velocity = targetDir.normalized * 20.0f;
+            //rb.AddForce(temp, ForceMode2D.Impulse);
+            attacking = true;
+            attackTime = attackRangeCd;
+        }
+    }
+
+    public GameObject CharacterSpawn(Vector2 position)
+    {
+        return (Instantiate(gameObject, position, transform.rotation));
     }
 
     public float getSpeed()

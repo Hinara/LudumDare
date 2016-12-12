@@ -24,6 +24,15 @@ public class PlayerController : MonoBehaviour {
             transform.rotation = quat;
             character.Attack();
         }
+        else if (Input.GetMouseButtonDown(1))
+        {
+            Vector3 vec = camera.ScreenToWorldPoint(Input.mousePosition);
+            vec.z = 0;
+            Quaternion quat = transform.rotation;
+            quat.SetFromToRotation(Vector3.right, (vec - transform.position));
+            transform.rotation = quat;
+            character.RangeAttack(vec);
+        }
         Vector2 temp = transform.position;
             if (Input.GetKey("z"))
                 temp.y += speed;

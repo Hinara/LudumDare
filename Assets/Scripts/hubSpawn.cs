@@ -14,9 +14,10 @@ public class hubSpawn : MonoBehaviour {
     [Tooltip("Intervalle between each characters spawn in secondes.")]
     public float intervalleSpawn;
     private float iniTime;
+    private GameObject boss;
     // Use this for initialization
     void Start () {
-        spawners[0].Spawn(team, chief);
+        boss = spawners[0].Spawn(team, chief);
 	}
 
     // Update is called once per frame
@@ -29,6 +30,10 @@ public class hubSpawn : MonoBehaviour {
                 element.Spawn(this.team, characs);
             }
             iniTime = Time.fixedTime;
+        }
+        if (boss == null)
+        {
+            Destroy(this.gameObject);
         }
     }
 }

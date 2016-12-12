@@ -14,8 +14,9 @@ public class attackTrigger : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.isTrigger != true && collision.CompareTag("Damageable"))
+        if (collision.CompareTag("Damageable"))
         {
+            print("Attacked");
             collision.SendMessageUpwards("Damaged", new object[2] { dmg, character.team });
         }
     }
