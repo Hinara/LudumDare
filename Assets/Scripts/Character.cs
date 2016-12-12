@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Character : MonoBehaviour {
@@ -151,8 +152,12 @@ public class Character : MonoBehaviour {
                 {
                     this.bar.size = (((float)this.life) / ((float)this.lifeMax));
                 }
-                if (life < 0)
+                if (life <= 0)
                 {
+                    if (this.isPlayer())
+                    {
+                        SceneManager.LoadScene("Game_Over");
+                    }
                     if (charac.isPlayer())
                     {
                         if (this.team == Team.Conner && charac.getRelationConner() > -2)
