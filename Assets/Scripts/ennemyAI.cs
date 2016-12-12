@@ -6,6 +6,7 @@ public class ennemyAI : MonoBehaviour
 {
     protected Character parent;
     protected Character target;
+    protected Character ally;
     public MinonType type;
 
     public float speed = 0.0f;
@@ -14,6 +15,7 @@ public class ennemyAI : MonoBehaviour
     {
         parent = GetComponentInParent<Character>();
         target = null;
+        ally = null;
     }
 
     private void rotateInDirection (Vector3 vec)
@@ -42,7 +44,46 @@ public class ennemyAI : MonoBehaviour
 
     private void Update()
     {
-        if (target != null)
+        if (ally != null && this.type == MinonType.Healer)
+        {
+            if (ally.getLifePurcentage() >= 100)
+            {
+                ally = null;
+                if (target != null && Vector2.Distance(target.transform.position, parent.transform.position) < 1.0f)
+                {
+                    rotateInDirection(target.transform.position);
+                    moveBackward();
+                }
+                else
+                {
+                    moveForward();
+                }
+            }
+            else
+            {
+                if (Vector2.Distance(ally.transform.position, parent.transform.position) < 1.0f)
+                {
+                    rotateInDirection(ally.transform.position);
+                    if (!parent.isAttacking())
+                    {
+                        parent.Attack();
+                    }
+                }
+                else
+                {
+                    if (target != null && Vector2.Distance(ally.transform.position, parent.transform.position) < 1.0f)
+                    {
+                        rotateInDirection(target.transform.position);
+                        moveBackward();
+                    }
+                    else
+                    {
+                        moveForward();
+                    }
+                }
+            }
+        }
+        else if (target != null)
         {
             if (target.gameObject == null)
             {
@@ -93,6 +134,17 @@ public class ennemyAI : MonoBehaviour
                             moveForward();
                         }
                         break;
+                    case MinonType.Healer:
+                        if (Vector2.Distance(target.transform.position, parent.transform.position) < 1.0f)
+                        {
+                            moveBackward();
+                        }
+                        else
+                        {
+                            rotateInDirection(Vector3.zero);
+                            moveForward();
+                        }
+                        break;
                     default:
                         break;
                 }
@@ -111,6 +163,14 @@ public class ennemyAI : MonoBehaviour
     public Character getTarget()
     {
         return (this.target);
+    }
+    public void setAlly(Character ally)
+    {
+        this.ally = ally;
+    }
+    public Character getAlly()
+    {
+        return (this.ally);
     }
 
     private void returnValueImportant(Character charac)

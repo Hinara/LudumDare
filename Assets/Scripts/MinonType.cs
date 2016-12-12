@@ -5,5 +5,6 @@ using UnityEngine;
 public enum MinonType {
     Archer,
     Spearman,
-    Swordman
+    Swordman,
+    Healer
 }

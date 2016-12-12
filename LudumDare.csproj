@@ -82,9 +82,11 @@
     <Compile Include="Assets\Scripts\SpawnEnemies.cs" />
     <Compile Include="Assets\Scripts\StayOnPoint.cs" />
     <Compile Include="Assets\Scripts\Team.cs" />
+    <Compile Include="Assets\Scripts\allyDetection.cs" />
     <Compile Include="Assets\Scripts\attackTrigger.cs" />
     <Compile Include="Assets\Scripts\ennemiDetection.cs" />
     <Compile Include="Assets\Scripts\ennemyAI.cs" />
+    <Compile Include="Assets\Scripts\healTrigger.cs" />
     <Compile Include="Assets\Scripts\hubSpawn.cs" />
     <Compile Include="Assets\Scripts\slideAway.cs" />
   </ItemGroup>

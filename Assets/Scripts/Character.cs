@@ -143,7 +143,30 @@ public class Character : MonoBehaviour {
         }
     }
 
+    void Healed(Character charac)
+    {
+        int dmg = charac.getDamage();
+        life += dmg;
+        if (life > lifeMax)
+        {
+            life = lifeMax;
+        }
+    }
+
     public void Attack()
+    {
+        if (!attacking)
+        {
+            //Need to swap two tie the player rotation for the attack
+            gameObject.transform.rotation = Quaternion.Inverse(gameObject.transform.rotation);
+            gameObject.transform.rotation = Quaternion.Inverse(gameObject.transform.rotation);
+            attacking = true;
+            attackTime = attackCd;
+            attackTrigger.enabled = true;
+        }
+    }
+
+    public void Heal()
     {
         if (!attacking)
         {
@@ -201,5 +224,9 @@ public class Character : MonoBehaviour {
     public bool isInvincible()
     {
         return (this.immuneTime > 0.0f);
+    }
+    public int getLifeMax()
+    {
+        return (this.lifeMax);
     }
 }
