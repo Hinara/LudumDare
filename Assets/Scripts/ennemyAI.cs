@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+    protected Character parent;
+    public MinonType type;
+    protected Character target;
 public class ennemyAI : MonoBehaviour {
 
-    protected Character parent;
-    protected Character target;
-    public MinonType type;
     public float speed = 0.0f;
     // Use this for initialization
     protected void Awake()
@@ -95,6 +95,10 @@ public class ennemyAI : MonoBehaviour {
         return (this.target);
     }
 
+    private void returnValueImportant(Character charac)
+    {
+        int value;
+    }
 
     public Character closestEnnemy()
     {
