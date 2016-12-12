@@ -52,9 +52,6 @@
     <Reference Include="UnityEngine">
       <HintPath>Library\UnityAssemblies\UnityEngine.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.Advertisements">
-      <HintPath>Library\UnityAssemblies\UnityEngine.Advertisements.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>Library\UnityAssemblies\UnityEngine.UI.dll</HintPath>
     </Reference>
@@ -70,9 +67,6 @@
     <Reference Include="UnityEngine.HoloLens">
       <HintPath>Library\UnityAssemblies\UnityEngine.HoloLens.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.Purchasing">
-      <HintPath>Library\UnityAssemblies\UnityEngine.Purchasing.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEngine.VR">
       <HintPath>Library\UnityAssemblies\UnityEngine.VR.dll</HintPath>
     </Reference>
@@ -81,6 +75,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Bouton_Manager.cs" />
     <Compile Include="Assets\Scripts\Character.cs" />
     <Compile Include="Assets\Scripts\MinonType.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
@@ -88,10 +83,12 @@
     <Compile Include="Assets\Scripts\SpawnEnemies.cs" />
     <Compile Include="Assets\Scripts\StayOnPoint.cs" />
     <Compile Include="Assets\Scripts\Team.cs" />
+    <Compile Include="Assets\Scripts\TextBox_Manager.cs" />
     <Compile Include="Assets\Scripts\allyDetection.cs" />
     <Compile Include="Assets\Scripts\attackTrigger.cs" />
     <Compile Include="Assets\Scripts\ennemiDetection.cs" />
     <Compile Include="Assets\Scripts\ennemyAI.cs" />
+    <Compile Include="Assets\Scripts\gameOver.cs" />
     <Compile Include="Assets\Scripts\healTrigger.cs" />
     <Compile Include="Assets\Scripts\hubSpawn.cs" />
     <Compile Include="Assets\Scripts\slideAway.cs" />
