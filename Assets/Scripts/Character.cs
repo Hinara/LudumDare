@@ -36,6 +36,7 @@ public class Character : MonoBehaviour {
     private float attackTime = 0f;
     [Tooltip("Collider 2D of the hit detection.")]
     public Collider2D attackTrigger;
+    private int lifeMax;
 
     private void Awake()
     {
@@ -44,6 +45,7 @@ public class Character : MonoBehaviour {
     // Use this for initialization
     void Start ()
     {
+        lifeMax = life;
         switch (this.team)
             {
             case Team.Flint:
@@ -153,6 +155,10 @@ public class Character : MonoBehaviour {
     public float getSpeed()
     {
         return (speed);
+    }
+    public int getLifePurcentage()
+    {
+        return ((life * 100) / lifeMax);
     }
     public bool isAttacking()
     {

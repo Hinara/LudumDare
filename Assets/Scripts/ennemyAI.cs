@@ -60,6 +60,10 @@ public class ennemyAI : MonoBehaviour {
         return (this.target);
     }
 
+    private void returnValueImportant(Character charac)
+    {
+        int value;
+    }
 
     public Character closestEnnemy()
     {
