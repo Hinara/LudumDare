@@ -20,8 +20,6 @@ public class ennemiDetection : MonoBehaviour {
 
     private int returnValueImportant(Character charac, Character me)
     {
-        if (charac.getTeam() == Team.Neutral)
-            return (-1);
         if (pTeam(me, charac) == -1)
             return (-1);
         int value = pTeam(me, charac) + charac.getLifePurcentage();
@@ -76,6 +74,8 @@ public class ennemiDetection : MonoBehaviour {
         switch (charac.getTeam())
         {
             case Team.Conner:
+                if (enemy.isPlayer())
+                    return enemy.getRelationConner();
                 if (enemy.getTeam() == Team.Conner)
                     return (friend);
                 if (enemy.getTeam() == Team.Flint)
@@ -87,6 +87,8 @@ public class ennemiDetection : MonoBehaviour {
                 break;
 
             case Team.Flint:
+                if (enemy.isPlayer())
+                    return enemy.getRelationFlint();
                 if (enemy.getTeam() == Team.Conner)
                     return (ennemy);
                 if (enemy.getTeam() == Team.Flint)
@@ -98,6 +100,8 @@ public class ennemiDetection : MonoBehaviour {
                 break;
 
             case Team.Kya:
+                if (enemy.isPlayer())
+                    return enemy.getRelationKya();
                 if (enemy.getTeam() == Team.Conner)
                     return (neutral);
                 if (enemy.getTeam() == Team.Flint)
@@ -109,6 +113,8 @@ public class ennemiDetection : MonoBehaviour {
                 break;
 
             case Team.Saria:
+                if (enemy.isPlayer())
+                    return enemy.getRelationSaria();
                 if (enemy.getTeam() == Team.Conner)
                     return (neutral);
                 if (enemy.getTeam() == Team.Flint)
@@ -119,6 +125,6 @@ public class ennemiDetection : MonoBehaviour {
                     return (friend);
                 break;
         }
-        return (0);
+        return (-1);
     }
 }
