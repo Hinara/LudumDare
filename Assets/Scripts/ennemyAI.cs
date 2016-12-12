@@ -16,6 +16,30 @@ public class ennemyAI : MonoBehaviour
         target = null;
     }
 
+    private void rotateInDirection (Vector3 vec)
+    {
+        Quaternion quat = transform.rotation;
+        quat.SetFromToRotation(Vector3.right, (vec - transform.position));
+        transform.rotation = quat;
+    }
+
+    private void moveForward()
+    {
+        Vector2 temp = transform.position;
+        temp.y = temp.y + (Mathf.Sin(transform.rotation.eulerAngles.z) * speed);
+        temp.x = temp.x + (Mathf.Cos(transform.rotation.eulerAngles.z) * speed);
+        transform.position = temp;
+    }
+    private void moveBackward()
+    {
+        transform.rotation = Quaternion.Inverse(transform.rotation);
+        Vector2 temp = transform.position;
+        temp.y = temp.y - (Mathf.Sin(transform.rotation.eulerAngles.z) * speed);
+        temp.x = temp.x - (Mathf.Cos(transform.rotation.eulerAngles.z) * speed);
+        transform.position = temp;
+        transform.rotation = Quaternion.Inverse(transform.rotation);
+    }
+
     private void Update()
     {
         if (target != null)
@@ -24,67 +48,60 @@ public class ennemyAI : MonoBehaviour
             {
                 target = null;
             }
-            else if (type == MinonType.Swordman && !parent.isAttacking() && Vector2.Distance(target.transform.position, parent.transform.position) < 0.5f && !target.isInvincible())
-            {
-                Quaternion quat = transform.rotation;
-                quat.SetFromToRotation(Vector3.right, (target.transform.position - transform.position));
-                transform.rotation = quat;
-                parent.Attack();
-            }
-            else if (type == MinonType.Spearman && !parent.isAttacking() && Vector2.Distance(target.transform.position, parent.transform.position) < 1.0f && !target.isInvincible())
-            {
-                Quaternion quat = transform.rotation;
-                quat.SetFromToRotation(Vector3.right, (target.transform.position - transform.position));
-                transform.rotation = quat;
-                parent.Attack();
-            }
-            else if (type == MinonType.Archer)
-            {
-                if (Vector2.Distance(target.transform.position, parent.transform.position) < 0.5f)
-                {
-                    Quaternion quat = transform.rotation;
-                    quat.SetFromToRotation(Vector3.right, (target.transform.position - transform.position));
-                    transform.rotation = quat;
-                    parent.Attack();
-                }
-                else if (Vector2.Distance(target.transform.position, parent.transform.position) < 2.5f)
-                {
-                    Quaternion quat = transform.rotation;
-                    quat.SetFromToRotation(Vector3.right, (target.transform.position - transform.position));
-                    transform.rotation = quat;
-                    parent.RangeAttack(target.transform.position);
-                }
-                else
-                {
-                    Quaternion quat = transform.rotation;
-                    quat.SetFromToRotation(Vector3.right, (target.transform.position - transform.position));
-                    transform.rotation = quat;
-                    Vector2 temp = transform.position;
-                    temp.y = temp.y + (Mathf.Sin(quat.eulerAngles.z) * 0.02f);
-                    temp.x = temp.x + (Mathf.Cos(quat.eulerAngles.z) * 0.02f);
-                    transform.position = temp;
-                }
-            }
             else
             {
-                Quaternion quat = transform.rotation;
-                quat.SetFromToRotation(Vector3.right, (target.transform.position - transform.position));
-                transform.rotation = quat;
-                Vector2 temp = transform.position;
-                temp.y = temp.y + (Mathf.Sin(quat.eulerAngles.z) * 0.02f);
-                temp.x = temp.x + (Mathf.Cos(quat.eulerAngles.z) * 0.02f);
-                transform.position = temp;
+                rotateInDirection(target.transform.position);
+                switch (this.type)
+                {
+                    case MinonType.Swordman:
+                        if (Vector2.Distance(target.transform.position, parent.transform.position) < 0.8f)
+                        {
+                            if (!parent.isAttacking() && !target.isInvincible())
+                            {
+                                parent.Attack();
+                            }
+                        }
+                        else
+                        {
+                            moveForward();
+                        }
+                        break;
+                    case MinonType.Spearman:
+                        if (Vector2.Distance(target.transform.position, parent.transform.position) < 1.0f)
+                        {
+                            if (!parent.isAttacking() && !target.isInvincible())
+                            {
+                                parent.Attack();
+                            }
+                        }
+                        else
+                        {
+                            moveForward();
+                        }
+                        break;
+                    case MinonType.Archer:
+                        if (Vector2.Distance(target.transform.position, parent.transform.position) < 1f)
+                        {
+                            moveBackward();
+                        }
+                        else if (Vector2.Distance(target.transform.position, parent.transform.position) < 3f)
+                        {
+                            parent.RangeAttack(target.transform.position);
+                        }
+                        else
+                        {
+                            moveForward();
+                        }
+                        break;
+                    default:
+                        break;
+                }
             }
         }
         else
         {
-            Quaternion quat = transform.rotation;
-            quat.SetFromToRotation(Vector3.right, -transform.position);
-            transform.rotation = quat;
-            Vector2 temp = transform.position;
-            temp.y = temp.y + (Mathf.Sin(quat.eulerAngles.z) * 0.02f);
-            temp.x = temp.x + (Mathf.Cos(quat.eulerAngles.z) * 0.02f);
-            transform.position = temp;
+            rotateInDirection(Vector3.zero);
+            moveForward();
         }
     }
     public void setTarget(Character target)

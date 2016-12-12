@@ -147,6 +147,9 @@ public class Character : MonoBehaviour {
     {
         if (!attacking)
         {
+            //Need to swap two tie the player rotation for the attack
+            gameObject.transform.rotation = Quaternion.Inverse(gameObject.transform.rotation);
+            gameObject.transform.rotation = Quaternion.Inverse(gameObject.transform.rotation);
             attacking = true;
             attackTime = attackCd;
             attackTrigger.enabled = true;

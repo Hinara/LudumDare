@@ -192,7 +192,7 @@ MonoBehaviour:
   damages: 25
   attackCd: 0.5
   attackRangeCd: 2
-  attackDuration: 0.1
+  attackDuration: 1
   attackTrigger: {fileID: 61381212209792632}
   projectile: {fileID: 0}
 --- !u!114 &114466313033692490
@@ -207,7 +207,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 2
-  speed: 0.1
+  speed: 0.02
 --- !u!114 &114591136474006012
 MonoBehaviour:
   m_ObjectHideFlags: 1

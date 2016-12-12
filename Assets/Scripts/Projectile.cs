@@ -8,11 +8,12 @@ public class Projectile : MonoBehaviour {
     public float ttl = 3.0f;
     private void OnTriggerEnter2D(Collider2D collider)
     {
-        /*if (collision.gameObject.GetComponent<Projectile>() != null)
+        if (collider.gameObject.GetComponent<Projectile>() != null)
         {
-            Destroy(collision.gameObject);
-        }*/
-        if (collider.CompareTag("Damageable"))
+            Destroy(collider.gameObject);
+            Destroy(this.gameObject);
+        }
+        else if (collider.CompareTag("Damageable"))
         {
             if (this.chara != null && this.chara.gameObject != null && 
                 collider.gameObject.GetInstanceID() != this.chara.gameObject.GetInstanceID())

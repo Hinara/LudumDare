@@ -11,6 +11,12 @@ public class attackTrigger : MonoBehaviour {
         character = GetComponentInParent<Character>();
     }
 
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        OnTriggerEnter2D(collision);
+    }
+
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Damageable"))
