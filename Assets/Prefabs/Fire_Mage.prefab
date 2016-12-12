@@ -191,7 +191,7 @@ MonoBehaviour:
   immunityTime: 0.6
   speed: 0.1
   team: 0
-  damages: 55
+  damages: 65
   attackCd: 0.5
   attackRangeCd: 4
   attackDuration: 0.1

@@ -134,7 +134,7 @@ public class Character : MonoBehaviour {
     {
         int dmg = charac.getDamage();
         Team team = charac.getTeam();
-        if (true)// team != this.team)
+        if (team != this.team)
         {
             if (immuneTime <= 0.0f)
             {
