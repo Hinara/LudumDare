@@ -8,4 +8,5 @@ public enum MinonType {
     Spearman,
     Swordman,
     Healer,
+    Assassin
 }

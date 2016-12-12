@@ -128,7 +128,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1800232309269002}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.65, y: 3.25, z: 0}
+  m_LocalPosition: {x: 4.72, y: 1.42, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 4820009622584296}
@@ -198,7 +198,7 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 2
+  m_Radius: 4
 --- !u!58 &58451166040372536
 CircleCollider2D:
   m_ObjectHideFlags: 1
@@ -224,7 +224,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48da722445c84614c83cee339af1f05c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 3
+  type: 4
   speed: 0.012
 --- !u!114 &114468892141754536
 MonoBehaviour:
@@ -259,16 +259,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6881ec07d75c47f4bbf849ac4bafff08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  minion: 4
+  player: 0
   minCoin: 5
   maxCoin: 21
   minXp: 21
   maxXp: 51
-  life: 50
+  life: 25
   coin: {fileID: 50075166168253066, guid: 90e22b45da5518a46b0558470ccaf8cd, type: 2}
   xp: {fileID: 50451258681554534, guid: f38e2211d4921d344a7ccf613e590f0a, type: 2}
   immunityTime: 0.6
   speed: 0.1
-  team: 2
+  team: 0
   damages: 10
   attackCd: 1
   attackRangeCd: 2

@@ -21,7 +21,6 @@ public class healTrigger : MonoBehaviour {
     {
         if (collision.CompareTag("Damageable"))
         {
-            print("Heal");
             Character collider = collision.GetComponent<Character>();
             if (collider.team == character.team)
             {

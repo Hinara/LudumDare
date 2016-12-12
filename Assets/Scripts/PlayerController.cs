@@ -16,7 +16,7 @@ public class PlayerController : MonoBehaviour {
     private void Update()
     {
         //Attack
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetButtonDown("Fire1"))
         {
             Vector3 vec = cam.ScreenToWorldPoint(Input.mousePosition);
             vec.z = 0;
@@ -26,7 +26,7 @@ public class PlayerController : MonoBehaviour {
             character.Attack();
         }
         //Bow
-        else if (Input.GetMouseButtonDown(1))
+        else if (Input.GetButtonDown("Fire2"))
         {
             Vector3 vec = cam.ScreenToWorldPoint(Input.mousePosition);
             vec.z = 0;
@@ -37,13 +37,13 @@ public class PlayerController : MonoBehaviour {
         }
         //Movement
         Vector2 temp = transform.position;
-            if (Input.GetKey("z"))
+            if (Input.GetButton("Up"))
                 temp.y += speed;
-            if (Input.GetKey("s"))
+            if (Input.GetButton("Down"))
                 temp.y -= speed;
-            if (Input.GetKey("q"))
+            if (Input.GetButton("Left"))
                 temp.x -= speed;
-            if (Input.GetKey("d"))
+            if (Input.GetButton("Right"))
                 temp.x += speed;
             transform.position = temp;
     }

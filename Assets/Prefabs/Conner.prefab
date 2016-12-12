@@ -146,8 +146,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5deaebf50ce071549b0b9cbb0c3c1da2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dmg: 50
-  character: {fileID: 0}
 --- !u!114 &114866134586204136
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -159,6 +157,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6881ec07d75c47f4bbf849ac4bafff08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  minion: 3
+  player: 0
   minCoin: 200
   maxCoin: 500
   minXp: 1000
@@ -169,9 +169,12 @@ MonoBehaviour:
   immunityTime: 0.6
   speed: 0.1
   team: 1
+  damages: 0
   attackCd: 0.5
+  attackRangeCd: 2
   attackDuration: 0.1
   attackTrigger: {fileID: 61878633805178870}
+  projectile: {fileID: 0}
 --- !u!212 &212544435135916838
 SpriteRenderer:
   m_ObjectHideFlags: 1
