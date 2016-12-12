@@ -191,7 +191,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 194a76fefad001a49bf4c5837a7e3028, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  camera: {fileID: 1740098244}
+  cam: {fileID: 1740098244}
   character: {fileID: 31461126}
 --- !u!58 &31461125
 CircleCollider2D:
@@ -289,11 +289,6 @@ Prefab:
       propertyPath: team
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114985722260043562, guid: a0ac491537ef2e549b1d5640a28ea5c8,
-        type: 2}
-      propertyPath: intervalleSpawn
-      value: 10
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a0ac491537ef2e549b1d5640a28ea5c8, type: 2}
   m_IsPrefabParent: 0
@@ -388,11 +383,6 @@ Prefab:
       propertyPath: team
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114985722260043562, guid: a0ac491537ef2e549b1d5640a28ea5c8,
-        type: 2}
-      propertyPath: intervalleSpawn
-      value: 10
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a0ac491537ef2e549b1d5640a28ea5c8, type: 2}
   m_IsPrefabParent: 0
@@ -441,7 +431,7 @@ Prefab:
     - target: {fileID: 114985722260043562, guid: a0ac491537ef2e549b1d5640a28ea5c8,
         type: 2}
       propertyPath: intervalleSpawn
-      value: 10
+      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a0ac491537ef2e549b1d5640a28ea5c8, type: 2}
@@ -451,6 +441,53 @@ Transform:
   m_PrefabParentObject: {fileID: 4644318734879118, guid: a0ac491537ef2e549b1d5640a28ea5c8,
     type: 2}
   m_PrefabInternal: {fileID: 747296353}
+--- !u!1001 &1116755291
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4472731052234874, guid: 1174b5f817127ae4bbdbd120808f6876, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4472731052234874, guid: 1174b5f817127ae4bbdbd120808f6876, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4472731052234874, guid: 1174b5f817127ae4bbdbd120808f6876, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4472731052234874, guid: 1174b5f817127ae4bbdbd120808f6876, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4472731052234874, guid: 1174b5f817127ae4bbdbd120808f6876, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4472731052234874, guid: 1174b5f817127ae4bbdbd120808f6876, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4472731052234874, guid: 1174b5f817127ae4bbdbd120808f6876, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4472731052234874, guid: 1174b5f817127ae4bbdbd120808f6876, type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114586570383367854, guid: 1174b5f817127ae4bbdbd120808f6876,
+        type: 2}
+      propertyPath: team
+      value: 3
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 1174b5f817127ae4bbdbd120808f6876, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1001 &1181497382
 Prefab:
   m_ObjectHideFlags: 0
@@ -492,11 +529,6 @@ Prefab:
         type: 2}
       propertyPath: team
       value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 114985722260043562, guid: a0ac491537ef2e549b1d5640a28ea5c8,
-        type: 2}
-      propertyPath: intervalleSpawn
-      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a0ac491537ef2e549b1d5640a28ea5c8, type: 2}
