@@ -50,6 +50,7 @@ public class Character : MonoBehaviour {
     public Projectile projectile;
     [Tooltip("Projectile shot by the entity")]
     private int lifeMax;
+    private int ref_life;
     private int relationFlint = -1;
     private int relationConner = -1;
     private int relationKya = -1;
@@ -65,6 +66,19 @@ public class Character : MonoBehaviour {
     private int xps;
     private int level;
     private int xpsMax;
+
+    private void Reset()
+    {
+        xpsMax = 100;
+        gold = 0;
+        xps = 0;
+        life = ref_life;
+        lifeMax = ref_life;
+        Vector2 posIni = new Vector2(0.0f, 0.0f);
+        transform.position = posIni;
+        level = 1;
+        this.bar.size = (((float)this.life) / ((float)this.lifeMax));
+    }
 
     private void Awake()
     {
@@ -95,6 +109,7 @@ public class Character : MonoBehaviour {
                 color = new Color(0.0f / 255.0f, 0.0f / 255.0f, 0.0f / 255.0f);
                 break;
             }
+        ref_life = life;
         lifeMax = life;
         GetComponent<SpriteRenderer>().color = color;
         gold = 0;
@@ -156,7 +171,8 @@ public class Character : MonoBehaviour {
                 {
                     if (this.isPlayer())
                     {
-                        SceneManager.LoadScene("Game_Over");
+                        Reset();
+                        //SceneManager.LoadScene("Game_Over");
                     }
                     if (charac.isPlayer())
                     {
@@ -197,7 +213,8 @@ public class Character : MonoBehaviour {
                         charac.setXpText(displayXp);
                         charac.setGoldText(charac.getGold().ToString());
                     }
-                    Destroy(gameObject);
+                    if (!this.isPlayer())
+                        Destroy(gameObject);
                 }
                 immuneTime = immunityTime;
             }
