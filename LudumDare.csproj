@@ -75,6 +75,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Bouton_Manager.cs" />
     <Compile Include="Assets\Scripts\Character.cs" />
     <Compile Include="Assets\Scripts\MinonType.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
@@ -82,10 +83,12 @@
     <Compile Include="Assets\Scripts\SpawnEnemies.cs" />
     <Compile Include="Assets\Scripts\StayOnPoint.cs" />
     <Compile Include="Assets\Scripts\Team.cs" />
+    <Compile Include="Assets\Scripts\TextBox_Manager.cs" />
     <Compile Include="Assets\Scripts\allyDetection.cs" />
     <Compile Include="Assets\Scripts\attackTrigger.cs" />
     <Compile Include="Assets\Scripts\ennemiDetection.cs" />
     <Compile Include="Assets\Scripts\ennemyAI.cs" />
+    <Compile Include="Assets\Scripts\gameOver.cs" />
     <Compile Include="Assets\Scripts\healTrigger.cs" />
     <Compile Include="Assets\Scripts\hubSpawn.cs" />
     <Compile Include="Assets\Scripts\slideAway.cs" />
