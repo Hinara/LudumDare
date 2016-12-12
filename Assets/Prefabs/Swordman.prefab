@@ -181,10 +181,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minion: 3
   player: 0
-  minCoin: 5
-  maxCoin: 21
-  minXp: 21
-  maxXp: 51
+  minCoin: 30
+  maxCoin: 50
+  minXp: 30
+  maxXp: 50
   life: 100
   coin: {fileID: 50075166168253066, guid: 90e22b45da5518a46b0558470ccaf8cd, type: 2}
   xp: {fileID: 50451258681554534, guid: f38e2211d4921d344a7ccf613e590f0a, type: 2}
@@ -197,6 +197,9 @@ MonoBehaviour:
   attackDuration: 1
   attackTrigger: {fileID: 61381212209792632}
   projectile: {fileID: 0}
+  bar: {fileID: 0}
+  gold_text: {fileID: 0}
+  xp_text: {fileID: 0}
 --- !u!114 &114466313033692490
 MonoBehaviour:
   m_ObjectHideFlags: 1

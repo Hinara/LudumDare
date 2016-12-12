@@ -58,14 +58,18 @@ public class Character : MonoBehaviour {
     public Scrollbar bar;
     [Tooltip("Health ba rof the unity")]
     public Text gold_text;
+    private int gold;
     [Tooltip("Health ba rof the unity")]
     public Text xp_text;
+    private int xps;
+    private int level;
+    private int xpsMax;
 
     private void Awake()
     {
         attackTrigger.enabled = false;
         if (xp_text != null)
-            xp_text.text = "0";
+            xp_text.text = "0 / 100";
         if (gold_text != null)
             gold_text.text = "0";
     }
@@ -92,6 +96,10 @@ public class Character : MonoBehaviour {
             }
         lifeMax = life;
         GetComponent<SpriteRenderer>().color = color;
+        gold = 0;
+        xps = 0;
+        level = 1;
+        xpsMax = 100;
     }
 	// Update is called once per frame
 	void Update () {
@@ -163,6 +171,7 @@ public class Character : MonoBehaviour {
                             Vector2 posCoin = new Vector2(transform.position.x + randomX, transform.position.y + randomY);
                             Instantiate(coin, posCoin, transform.rotation);
                         }
+                        charac.setGold(charac.getGold() + nbCoins);
                         int nbXp = Random.Range(minXp, maxXp); // ... and xp
                         for (int i = 0; i < nbXp; i++)
                         {
@@ -171,6 +180,17 @@ public class Character : MonoBehaviour {
                             Vector2 posXp = new Vector2(gameObject.transform.position.x + randomX, transform.position.y + randomY);
                             Instantiate(xp, posXp, transform.rotation);
                         }
+                        charac.setXps(charac.getXps() + nbXp);
+                        if (charac.getXps() > charac.getXpsMax())
+                        {
+                            charac.setXps(charac.getXpsMax() - charac.getXps());
+                            setXpsMax((int)(getXpsMax() * 3.5f));
+                        }
+                        string displayXp = charac.getXps().ToString();
+                        displayXp += "/";
+                        displayXp += charac.getXpsMax().ToString();
+                        charac.setXpText(displayXp);
+                        charac.setGoldText(charac.getGold().ToString());
                     }
                     Destroy(gameObject);
                 }
@@ -313,4 +333,10 @@ public class Character : MonoBehaviour {
     public void setRelationSaria(int value) { relationSaria += value; }
     public void setRelationKya(int value) { relationKya += value; }
     public void setRelationConner(int value) { relationConner += value; }
+    public void setGold(int value) { gold = value; }
+    public void setXps(int value) { xps = value; }
+    public void setXpsMax(int value) { xpsMax = value; }
+    public int getGold() { return (gold); }
+    public int getXps() { return (xps); }
+    public int getXpsMax() { return (xpsMax); }
 }
