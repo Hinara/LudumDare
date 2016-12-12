@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class attackTrigger : MonoBehaviour {
 
-    public int dmg;
     Character character;
 
     private void Awake()
@@ -16,8 +15,7 @@ public class attackTrigger : MonoBehaviour {
     {
         if (collision.CompareTag("Damageable"))
         {
-            print("Attacked");
-            collision.SendMessageUpwards("Damaged", new object[2] { dmg, character.team });
+            collision.SendMessageUpwards("Damaged", character);
         }
     }
 }

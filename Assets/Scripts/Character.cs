@@ -28,6 +28,8 @@ public class Character : MonoBehaviour {
     public Team team;
 
     /* For attack */
+    [Tooltip("Damages.")]
+    public int damages;
     private bool attacking = false;
     [Tooltip("Cooldown between 2 attacks.")]
     public float attackCd = 0.5f;
@@ -107,10 +109,10 @@ public class Character : MonoBehaviour {
         }
     }
 
-    void Damaged(object[] obj)
+    void Damaged(Character charac)
     {
-        int dmg = (int) obj[0];
-        Team team = (Team) obj[1];
+        int dmg = charac.getDamage();
+        Team team = charac.getTeam();
         if (true)// team != this.team)
         {
             if (immuneTime <= 0.0f)
@@ -143,10 +145,8 @@ public class Character : MonoBehaviour {
 
     public void Attack()
     {
-        print("Attack");
         if (!attacking)
         {
-            print("Attack2");
             attacking = true;
             attackTime = attackCd;
             attackTrigger.enabled = true;
@@ -182,6 +182,14 @@ public class Character : MonoBehaviour {
     public int getLifePurcentage()
     {
         return ((life * 100) / lifeMax);
+    }
+    public Team getTeam()
+    {
+        return (team);
+    }
+    public int getDamage()
+    {
+        return (damages);
     }
     public bool isAttacking()
     {

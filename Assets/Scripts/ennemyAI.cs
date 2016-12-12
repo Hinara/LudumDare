@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public class ennemyAI : MonoBehaviour
+{
     protected Character parent;
-public class ennemyAI : MonoBehaviour {
     protected Character target;
     public MinonType type;
 
@@ -15,6 +16,7 @@ public class ennemyAI : MonoBehaviour {
         target = null;
     }
 
+    private void Update()
     {
         if (target != null)
         {

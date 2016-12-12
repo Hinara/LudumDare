@@ -179,7 +179,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5deaebf50ce071549b0b9cbb0c3c1da2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dmg: 50
 --- !u!114 &114586570383367854
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -201,7 +200,9 @@ MonoBehaviour:
   immunityTime: 0.6
   speed: 0.1
   team: 0
+  damages: 15
   attackCd: 0.5
+  attackRangeCd: 2
   attackDuration: 0.1
   attackTrigger: {fileID: 61335695045104862}
   projectile: {fileID: 0}

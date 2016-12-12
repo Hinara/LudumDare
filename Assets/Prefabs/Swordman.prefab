@@ -188,8 +188,10 @@ MonoBehaviour:
   xp: {fileID: 50451258681554534, guid: f38e2211d4921d344a7ccf613e590f0a, type: 2}
   immunityTime: 0.6
   speed: 0.1
-  team: 0
+  team: 2
+  damages: 25
   attackCd: 0.5
+  attackRangeCd: 2
   attackDuration: 0.1
   attackTrigger: {fileID: 61381212209792632}
   projectile: {fileID: 0}
@@ -217,7 +219,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5deaebf50ce071549b0b9cbb0c3c1da2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dmg: 50
 --- !u!114 &114779693291286440
 MonoBehaviour:
   m_ObjectHideFlags: 1

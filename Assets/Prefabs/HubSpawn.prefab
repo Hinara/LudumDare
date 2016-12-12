@@ -228,10 +228,10 @@ MonoBehaviour:
   - {fileID: 114417985410542760}
   characs:
   - {fileID: 114007998603359298, guid: 03ee014dd844f3e4ca6a9fcba470e747, type: 2}
-  - {fileID: 114586570383367854, guid: a2b8e10301d151c428c6391e4610f89c, type: 2}
+  - {fileID: 114586570383367854, guid: 1174b5f817127ae4bbdbd120808f6876, type: 2}
   - {fileID: 114647267197037166, guid: f6fdb7b21127d164c86a75d262264f7b, type: 2}
   chief: {fileID: 0}
-  intervalleSpawn: 100
+  intervalleSpawn: 10
 --- !u!212 &212144658719873226
 SpriteRenderer:
   m_ObjectHideFlags: 1

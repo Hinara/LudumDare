@@ -6,7 +6,6 @@ public class Projectile : MonoBehaviour {
 
     Character chara;
     public float ttl = 3.0f;
-    public int dmg = 25;
     private void OnTriggerEnter2D(Collider2D collider)
     {
         /*if (collision.gameObject.GetComponent<Projectile>() != null)
@@ -18,7 +17,7 @@ public class Projectile : MonoBehaviour {
             if (this.chara != null && this.chara.gameObject != null && 
                 collider.gameObject.GetInstanceID() != this.chara.gameObject.GetInstanceID())
             {
-                collider.SendMessageUpwards("Damaged", new object[2] { dmg, chara.team });
+                collider.SendMessageUpwards("Damaged", chara);
                 Destroy(this.gameObject);
             }
         }
