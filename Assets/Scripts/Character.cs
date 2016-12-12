@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 public class Character : MonoBehaviour {
     [Tooltip("Is the character the player ?.")]
     public bool player;
@@ -50,9 +52,20 @@ public class Character : MonoBehaviour {
     private int relationKya = -1;
     private int relationSaria = -1;
 
+    [Tooltip("Health ba rof the unity")]
+    public Scrollbar bar;
+    [Tooltip("Health ba rof the unity")]
+    public Text gold_text;
+    [Tooltip("Health ba rof the unity")]
+    public Text xp_text;
+
     private void Awake()
     {
         attackTrigger.enabled = false;
+        if (xp_text != null)
+            xp_text.text = "0";
+        if (gold_text != null)
+            gold_text.text = "0";
     }
     // Use this for initialization
     void Start ()
@@ -117,7 +130,7 @@ public class Character : MonoBehaviour {
         }
     }
 
-    void Damaged(Character charac)
+    public void Damaged(Character charac)
     {
         int dmg = charac.getDamage();
         Team team = charac.getTeam();
@@ -126,6 +139,10 @@ public class Character : MonoBehaviour {
             if (immuneTime <= 0.0f)
             {
                 life -= dmg;
+                if (this.bar)
+                {
+                    this.bar.size = (((float)this.life) / ((float)this.lifeMax));
+                }
                 if (life < 0)
                 {
                     if (charac.isPlayer())
@@ -166,6 +183,10 @@ public class Character : MonoBehaviour {
     {
         int dmg = charac.getDamage();
         life += dmg;
+        if (this.bar != null)
+        {
+            this.bar.size = ((float)this.life) / ((float) this.lifeMax);
+        }
         if (life > lifeMax)
         {
             life = lifeMax;
@@ -221,7 +242,6 @@ public class Character : MonoBehaviour {
             float angle = -60.0f;
             while (angle <= 60.0f)
             {
-                print(angle);
                 Vector2 targetDir = Quaternion.AngleAxis(angle, Vector3.back) * (targetPos - ((Vector2)transform.position));
                 GameObject obj = Instantiate(projectile.gameObject, transform.position, transform.rotation) as GameObject;
                 obj.GetComponent<Projectile>().setLauncher(this);
@@ -270,6 +290,16 @@ public class Character : MonoBehaviour {
     public int getLifeMax()
     {
         return (this.lifeMax);
+    }
+    public void setGoldText(string text)
+    {
+        if (gold_text != null)
+            gold_text.text = text;
+    }
+    public void setXpText(string text)
+    {
+        if (xp_text != null)
+            xp_text.text = text;
     }
     public int getRelationFlint() { return relationFlint; }
     public int getRelationSaria() { return relationSaria; }
