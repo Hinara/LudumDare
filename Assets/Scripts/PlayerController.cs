@@ -7,6 +7,19 @@ public class PlayerController : MonoBehaviour {
 
     public Camera cam;
     public Character character;
+
+    private void Awake()
+    {
+         GameObject obj= GameObject.FindGameObjectWithTag("Store");
+        if (obj != null)
+        {
+            print("ok");
+            character.team = obj.GetComponent<Store>().getTeam();
+            Destroy(obj);
+        }
+        print("ko");
+    }
+
     // Use this for initialization
     void Start () {
         speed = character.getSpeed();

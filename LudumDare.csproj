@@ -84,6 +84,7 @@
     <Compile Include="Assets\Scripts\Projectile.cs" />
     <Compile Include="Assets\Scripts\SpawnEnemies.cs" />
     <Compile Include="Assets\Scripts\StayOnPoint.cs" />
+    <Compile Include="Assets\Scripts\Store.cs" />
     <Compile Include="Assets\Scripts\Team.cs" />
     <Compile Include="Assets\Scripts\TextBox_Manager.cs" />
     <Compile Include="Assets\Scripts\allyDetection.cs" />
@@ -94,6 +95,7 @@
     <Compile Include="Assets\Scripts\healTrigger.cs" />
     <Compile Include="Assets\Scripts\hubSpawn.cs" />
     <Compile Include="Assets\Scripts\slideAway.cs" />
+    <Compile Include="Assets\goToMain.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Dialogue\Cornner_dialogue_EN.txt" />

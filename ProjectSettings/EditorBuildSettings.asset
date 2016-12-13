@@ -13,3 +13,5 @@ EditorBuildSettings:
     path: Assets/DIalogue persos.unity
   - enabled: 1
     path: Assets/GameOver.unity
+  - enabled: 1
+    path: Assets/Win.unity
