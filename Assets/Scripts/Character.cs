@@ -37,11 +37,14 @@ public class Character : MonoBehaviour {
     /* For attack */
     [Tooltip("Damages.")]
     public int damages;
+    private int damage_ref;
     private bool attacking = false;
     [Tooltip("Cooldown between 2 attacks.")]
     public float attackCd = 0.5f;
+    private float attackCd_ref;
     [Tooltip("Cooldown between 2 attacks for range attack.")]
     public float attackRangeCd = 2f;
+    private float attackRangeCd_ref;
     [Tooltip("Attack duration.")]
     public float attackDuration = 0.1f;
     private float attackTime = 0f;
@@ -78,6 +81,9 @@ public class Character : MonoBehaviour {
         transform.position = posIni;
         level = 1;
         this.bar.size = (((float)this.life) / ((float)this.lifeMax));
+        attackCd = attackCd_ref;
+        attackRangeCd = attackRangeCd_ref;
+        damages = damage_ref;
     }
 
     private void Awake()
@@ -116,6 +122,9 @@ public class Character : MonoBehaviour {
         xps = 0;
         level = 1;
         xpsMax = 100;
+        attackCd_ref = attackCd;
+        attackRangeCd_ref = attackRangeCd;
+        damage_ref = damages;
     }
 	// Update is called once per frame
 	void Update () {
@@ -152,6 +161,38 @@ public class Character : MonoBehaviour {
                 attacking = false;
             }
         }
+    }
+
+    private void levelUp()
+    {
+        int compUp = Random.Range(1, 5);
+        switch (compUp)
+        {
+            case 1:
+                lifeMax += 100;
+                break;
+
+            case 2:
+                damages += 20;
+                break;
+
+            case 3:
+                attackCd -= 0.2f;
+                if (attackCd < 0.0f)
+                    attackCd = 0.0f;
+                break;
+
+            case 4:
+                attackRangeCd -= 0.2f;
+                if (attackRangeCd < 0.0f)
+                    attackRangeCd = 0.0f;
+                break;
+
+            case 5:
+                gold += 300;
+                break;
+        }
+        life = lifeMax;
     }
 
     public void Damaged(Character charac)
@@ -206,6 +247,7 @@ public class Character : MonoBehaviour {
                         {
                             charac.setXps(charac.getXpsMax() - charac.getXps());
                             setXpsMax((int)(getXpsMax() * 3.5f));
+                            charac.levelUp();
                         }
                         string displayXp = charac.getXps().ToString();
                         displayXp += "/";
