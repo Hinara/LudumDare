@@ -888,22 +888,37 @@ Prefab:
     - target: {fileID: 224209460642605918, guid: e1248fff3386c5c4f83f976e9688297f,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: -560.3
+      value: 84.70001
       objectReference: {fileID: 0}
     - target: {fileID: 224209460642605918, guid: e1248fff3386c5c4f83f976e9688297f,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 221.1
+      value: -74.899994
       objectReference: {fileID: 0}
     - target: {fileID: 224209460642605918, guid: e1248fff3386c5c4f83f976e9688297f,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: -1140.5
+      value: 149.5
       objectReference: {fileID: 0}
     - target: {fileID: 224209460642605918, guid: e1248fff3386c5c4f83f976e9688297f,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: -462.3
+      value: 129.70001
+      objectReference: {fileID: 0}
+    - target: {fileID: 224209460642605918, guid: e1248fff3386c5c4f83f976e9688297f,
+        type: 2}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224209460642605918, guid: e1248fff3386c5c4f83f976e9688297f,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224209460642605918, guid: e1248fff3386c5c4f83f976e9688297f,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e1248fff3386c5c4f83f976e9688297f, type: 2}
@@ -2810,10 +2825,10 @@ RectTransform:
   m_Father: {fileID: 610539650}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -560.30005, y: 46}
-  m_SizeDelta: {x: -1140.5, y: -392.3}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: 84.69995, y: 46}
+  m_SizeDelta: {x: 149.5, y: 199.70001}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1928279912
 MonoBehaviour:
