@@ -188,7 +188,6 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 1177610145}
-  - {fileID: 578964073}
   m_Father: {fileID: 1486041701}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -484,13 +483,13 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 133287221}
-  m_RootOrder: 1
+  m_Father: {fileID: 1177610145}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -419, y: 173}
-  m_SizeDelta: {x: 1000, y: 500}
+  m_AnchoredPosition: {x: -287, y: 157}
+  m_SizeDelta: {x: 1000, y: 700}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &578964074
 MonoBehaviour:
@@ -513,10 +512,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 12
     m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 1
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -554,9 +553,13 @@ MonoBehaviour:
 
     Credits:
 
-    UI: Renaud ''Nhyarlathotep'' Melet and Robin ''Robix1206'' Milas
+    UI: Renaud ''Nhyarlathotep'' Melet
 
-    Programmation: Christian ''Zirk'' Chaux and Robin ''Robix1206'' Milas
+    and Robin ''Robix1206'' Milas
+
+    Programmation: Christian ''Zirk'' Chaux
+
+    and Robin ''Robix1206'' Milas
 
     Music: Paul ''Salamort'' Gaston
 
@@ -572,7 +575,9 @@ MonoBehaviour:
 
     To Crusaderflame for his advices.
 
-    To the others people who managed the Ludum Dare in Epitech
+    To the others people who managed the Ludum Dare in
+
+    Epitech
 
     for their help and their advice.
 
@@ -583,7 +588,9 @@ MonoBehaviour:
 
     If you want to speak with us,
 
-    read more informations about the background of the game,
+    read more informations about the background of the
+
+    game,
 
     or say what you think of it,
 
@@ -741,7 +748,7 @@ RectTransform:
   m_Children:
   - {fileID: 1364004421}
   m_Father: {fileID: 1177610145}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
@@ -1229,7 +1236,7 @@ RectTransform:
   m_Children:
   - {fileID: 1985483807}
   m_Father: {fileID: 1177610145}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1349,6 +1356,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 578964073}
   - {fileID: 709279521}
   - {fileID: 1168468790}
   - {fileID: 1668784026}
@@ -2044,7 +2052,7 @@ RectTransform:
   m_Children:
   - {fileID: 930229116}
   m_Father: {fileID: 1177610145}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
