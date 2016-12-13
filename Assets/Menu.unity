@@ -514,7 +514,7 @@ MonoBehaviour:
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 14
-    m_FontStyle: 0
+    m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
@@ -549,18 +549,20 @@ MonoBehaviour:
     Flint (lower left corner) have a lot of mages, fire mages are dangerous, please
     take care of that too...
 
+    I''ll let you discover all the units by yourself ;).
+
 
     Credits:
 
-    UI: Renaud ''Nhyarlathotep'' Melet and Robin ''Meera Dictaraes Iridilis'' Milas
+    UI: Renaud ''Nhyarlathotep'' Melet and Robin ''Robix1206'' Milas
 
     Programmation: Christian ''Zirk'' Chaux and Robin ''Robix1206'' Milas
 
-    Music: Paul ''Meera Dictaraes Iridilis'' Gaston
+    Music: Paul ''Salamort'' Gaston
 
     Sprites: Robin ''Robix1206'' Milas
 
-    Scenario: Paul ''Meera Dictaraes Iridilis'' Gaston
+    Scenario & Game Design: Paul ''Salamort'' Gaston
 
     and Christian ''Zirk'' Chaux
 
@@ -580,6 +582,10 @@ MonoBehaviour:
     Thanks of tryign our game.
 
     If you want to speak with us,
+
+    read more informations about the background of the game,
+
+    or say what you think of it,
 
     you can visit this website: vespiasblog.wordpress.com'
 --- !u!222 &578964075
@@ -1502,7 +1508,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 16
+    m_FontSize: 12
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
@@ -1513,7 +1519,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Main Menu
+  m_Text: 'Vespias:
+
+    Battle for the pentacle'
 --- !u!222 &1364004423
 CanvasRenderer:
   m_ObjectHideFlags: 0
