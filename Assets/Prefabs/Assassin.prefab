@@ -225,6 +225,7 @@ MonoBehaviour:
   bar: {fileID: 0}
   gold_text: {fileID: 0}
   xp_text: {fileID: 0}
+  level_text: {fileID: 0}
 --- !u!114 &114998734891372738
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -267,7 +268,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: c257b2c90c634fe4bb7db3ce6977c753, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 251ada6ae726ee742944d99016dc2293, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
