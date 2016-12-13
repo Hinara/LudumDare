@@ -121,7 +121,7 @@ public class Character : MonoBehaviour {
         gold = 0;
         xps = 0;
         level = 1;
-        xpsMax = 100;
+        xpsMax = 50;
         attackCd_ref = attackCd;
         attackRangeCd_ref = attackRangeCd;
         damage_ref = damages;
@@ -213,7 +213,6 @@ public class Character : MonoBehaviour {
                     if (this.isPlayer())
                     {
                         Reset();
-                        //SceneManager.LoadScene("Game_Over");
                     }
                     if (charac.isPlayer())
                     {
@@ -246,7 +245,7 @@ public class Character : MonoBehaviour {
                         if (charac.getXps() > charac.getXpsMax())
                         {
                             charac.setXps(charac.getXpsMax() - charac.getXps());
-                            setXpsMax((int)(getXpsMax() * 3.5f));
+                            charac.setXpsMax((int)(getXpsMax() * 2f));
                             charac.levelUp();
                         }
                         string displayXp = charac.getXps().ToString();
