@@ -66,13 +66,14 @@ public class Character : MonoBehaviour {
     private int gold;
     [Tooltip("Health ba rof the unity")]
     public Text xp_text;
+    public Text level_text;
     private int xps;
     private int level;
     private int xpsMax;
 
     private void Reset()
     {
-        xpsMax = 100;
+        xpsMax = 50;
         gold = 0;
         xps = 0;
         life = ref_life;
@@ -84,6 +85,12 @@ public class Character : MonoBehaviour {
         attackCd = attackCd_ref;
         attackRangeCd = attackRangeCd_ref;
         damages = damage_ref;
+        if (xp_text != null)
+            xp_text.text = "0 / 100";
+        if (gold_text != null)
+            gold_text.text = "0";
+        if (level_text != null)
+            level_text.text = "Level 1";
     }
 
     private void Awake()
@@ -93,6 +100,8 @@ public class Character : MonoBehaviour {
             xp_text.text = "0 / 100";
         if (gold_text != null)
             gold_text.text = "0";
+        if (level_text != null)
+            level_text.text = "Level 1";
     }
     // Use this for initialization
     void Start ()
@@ -121,7 +130,7 @@ public class Character : MonoBehaviour {
         gold = 0;
         xps = 0;
         level = 1;
-        xpsMax = 100;
+        xpsMax = 50;
         attackCd_ref = attackCd;
         attackRangeCd_ref = attackRangeCd;
         damage_ref = damages;
@@ -173,7 +182,7 @@ public class Character : MonoBehaviour {
                 break;
 
             case 2:
-                damages += 20;
+                damages += 15;
                 break;
 
             case 3:
@@ -193,6 +202,7 @@ public class Character : MonoBehaviour {
                 break;
         }
         life = lifeMax;
+        level++;
     }
 
     public void Damaged(Character charac)
@@ -213,7 +223,6 @@ public class Character : MonoBehaviour {
                     if (this.isPlayer())
                     {
                         Reset();
-                        //SceneManager.LoadScene("Game_Over");
                     }
                     if (charac.isPlayer())
                     {
@@ -246,7 +255,7 @@ public class Character : MonoBehaviour {
                         if (charac.getXps() > charac.getXpsMax())
                         {
                             charac.setXps(charac.getXpsMax() - charac.getXps());
-                            setXpsMax((int)(getXpsMax() * 3.5f));
+                            charac.setXpsMax((int)(getXpsMax() * 2f));
                             charac.levelUp();
                         }
                         string displayXp = charac.getXps().ToString();
@@ -254,6 +263,7 @@ public class Character : MonoBehaviour {
                         displayXp += charac.getXpsMax().ToString();
                         charac.setXpText(displayXp);
                         charac.setGoldText(charac.getGold().ToString());
+                        charac.setLevel(charac.getLevel());
                     }
                     if (!this.isPlayer())
                         Destroy(gameObject);
@@ -389,6 +399,14 @@ public class Character : MonoBehaviour {
         if (xp_text != null)
             xp_text.text = text;
     }
+    public void setLevelText(string text)
+    {
+        string txtLevel;
+        txtLevel = "Level ";
+        if (level_text != null)
+            txtLevel += text;
+        level_text.text = txtLevel;
+    }
     public int getRelationFlint() { return relationFlint; }
     public int getRelationSaria() { return relationSaria; }
     public int getRelationKya() { return relationKya; }
@@ -400,7 +418,9 @@ public class Character : MonoBehaviour {
     public void setGold(int value) { gold = value; }
     public void setXps(int value) { xps = value; }
     public void setXpsMax(int value) { xpsMax = value; }
+    public void setLevel(int value) { level = value; }
     public int getGold() { return (gold); }
     public int getXps() { return (xps); }
     public int getXpsMax() { return (xpsMax); }
+    public int getLevel() { return (level); }
 }
