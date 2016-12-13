@@ -120,16 +120,16 @@ RectTransform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 117730006}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 610539650}
+  m_Father: {fileID: 1652273296}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -470, y: 212}
+  m_AnchoredPosition: {x: 92.30005, y: -19.099976}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &117730008
@@ -1433,7 +1433,7 @@ Prefab:
     - target: {fileID: 114985722260043562, guid: a0ac491537ef2e549b1d5640a28ea5c8,
         type: 2}
       propertyPath: intervalleSpawn
-      value: 10
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 212500426478708942, guid: a0ac491537ef2e549b1d5640a28ea5c8,
         type: 2}
@@ -2291,6 +2291,11 @@ Transform:
   m_PrefabParentObject: {fileID: 4644318734879118, guid: a0ac491537ef2e549b1d5640a28ea5c8,
     type: 2}
   m_PrefabInternal: {fileID: 1181497382}
+--- !u!224 &1652273296 stripped
+RectTransform:
+  m_PrefabParentObject: {fileID: 224209460642605918, guid: e1248fff3386c5c4f83f976e9688297f,
+    type: 2}
+  m_PrefabInternal: {fileID: 620972954}
 --- !u!1 &1740098240
 GameObject:
   m_ObjectHideFlags: 0

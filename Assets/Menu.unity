@@ -387,7 +387,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &428270404
 GameObject:
@@ -489,8 +489,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -409, y: 296}
-  m_SizeDelta: {x: 1000, y: 320}
+  m_AnchoredPosition: {x: -409, y: 173}
+  m_SizeDelta: {x: 1000, y: 500}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &578964074
 MonoBehaviour:
@@ -552,16 +552,34 @@ MonoBehaviour:
 
     Credits:
 
-    UI: Renaud Melet and Robin Milas
+    UI: Renaud ''Nhyarlathotep'' Melet and Robin ''Meera Dictaraes Iridilis'' Milas
 
-    Programmation: Christian Chaux and Robin Milas
+    Programmation: Christian ''Zirk'' Chaux and Robin ''Robix1206'' Milas
 
-    Music: Paul Gaston
+    Music: Paul ''Meera Dictaraes Iridilis'' Gaston
 
-    Sprites: Robin Milas
+    Sprites: Robin ''Robix1206'' Milas
+
+    Scenario: Paul ''Meera Dictaraes Iridilis'' Gaston
+
+    and Christian ''Zirk'' Chaux
+
+    Special thanks to Amira and Shuu for the translations
+
+    (that we finally didn''t use :3 Sorry)
+
+    To Crusaderflame for his advices.
+
+    To the others people who managed the Ludum Dare in Epitech
+
+    for their help and their advice.
+
+    And finally thanks to Raverclaw (our Epitech''s house)
 
 
-    Thanks of tryign our game. If you want to speak with us,
+    Thanks of tryign our game.
+
+    If you want to speak with us,
 
     you can visit this website: vespiasblog.wordpress.com'
 --- !u!222 &578964075
@@ -1173,7 +1191,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1168468789
 GameObject:
@@ -1664,7 +1682,7 @@ Transform:
   - {fileID: 133287221}
   - {fileID: 990221596}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &1486041702
 AudioSource:
@@ -1876,7 +1894,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1505867551
 GameObject:
@@ -2493,7 +2511,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2132919528
 MonoBehaviour:
