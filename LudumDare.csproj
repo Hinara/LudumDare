@@ -77,6 +77,8 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Bouton_Manager.cs" />
     <Compile Include="Assets\Scripts\Character.cs" />
+    <Compile Include="Assets\Scripts\Circle.cs" />
+    <Compile Include="Assets\Scripts\Hide_Manager.cs" />
     <Compile Include="Assets\Scripts\MinonType.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\Projectile.cs" />
